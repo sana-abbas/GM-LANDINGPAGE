@@ -3,9 +3,8 @@ body{
 }
 .container-fluid{
   background-image: url(images/background-building.png);
-  width: 1800px;
   height: 1427px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
