@@ -1,30 +1,27 @@
 body{
 
 }
-.main{
+.container-fluid{
   background-image: url(images/background-building.png);
-  width: 1600px;
+  width: 1800px;
   height: 1427px;
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.container{
+  text-align: center;
+}
 .logo{
-  width: 650px;
-  height: 600px;
-  margin-left: 30%;
-  margin-top: 3%;
+  width: 450px;
+  height: 500px;
 }
 .text{
   margin-top: 1%;
-  padding: 0 35% 2% 35%;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   text-align: center;
   color: #EDE8DA;
-}
-.second, .third{
-  padding:0 0 2% 0;
 }
