@@ -1,19 +1,21 @@
-body{
-
-}
-.container-fluid{
-  background-image: url(images/background-building.png);
-  height: 1427px;
+body, html{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255, 255, 255, 0.3)), url(images/background.png);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-y: hidden;
 }
+
 .container{
   text-align: center;
 }
-.logo{
-  width: 450px;
-  height: 500px;
+.img-fluid{
+  width: 350px;
+  height: 350px;
+  margin-top: 5%;
 }
 .text{
   margin-top: 1%;
@@ -24,3 +26,24 @@ body{
   text-align: center;
   color: #EDE8DA;
 }
+
+@media only screen
+    and (min-width : 320px)
+    and (max-width : 480px){
+    body, html {
+      background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255, 255, 255, 0.3)), url(images/background.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .text{
+      margin-top: 1%;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 0 10%;
+      text-align: center;
+      color: #EDE8DA;
+    }
+  }
