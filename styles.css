@@ -14,8 +14,7 @@ body, html{
 .rounded{
   height: auto;
   box-sizing: border-box;
-  width: 300px;
-  padding-top: 5%;
+  width: 350px;
 }
 .text{
   box-sizing: border-box;
@@ -23,7 +22,7 @@ body, html{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 19px;
   text-align: center;
   color: #EDE8DA;
 }
