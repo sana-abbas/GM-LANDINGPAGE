@@ -5,7 +5,6 @@ body, html{
   background-image: url(images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-y: hidden;
 }
 
 .container{
@@ -26,11 +25,15 @@ body, html{
   text-align: center;
   color: #EDE8DA;
 }
+.txt_one{
+  margin-top: 4%;
+}
 
 @media only screen
     and (min-width : 320px)
     and (max-width : 480px){
     body, html {
+      height: 100%;
       background-image: url(images/background_mobile2.png);
       background-size: cover;
       background-position: center;
@@ -40,7 +43,7 @@ body, html{
       box-sizing: border-box;
       height: auto;
       width: 300px;
-      margin-top: 6%;
+      margin-top: 3%;
     }
     .text{
       box-sizing: border-box;
@@ -54,7 +57,7 @@ body, html{
       color: #EDE8DA;
     }
     .txt_one{
-      margin-top: 18%;
+      margin-top: 16%;
       padding: 0;
     }
   }
