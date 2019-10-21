@@ -2,9 +2,8 @@ body, html{
   padding: 0;
   margin: 0;
   height: 100%;
-  background-image: url(images/background-building.png);
+  background-image: url(images/background.png);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   overflow-y: hidden;
 }
@@ -12,11 +11,14 @@ body, html{
 .container{
   text-align: center;
 }
-.img-fluid{
+.rounded{
+  height: auto;
+  box-sizing: border-box;
   width: 350px;
-  height: 350px;
+  padding-top: 5%;
 }
 .text{
+  box-sizing: border-box;
   margin-top: 1%;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -35,21 +37,25 @@ body, html{
       background-position: center;
       background-repeat: no-repeat;
     }
-    .img-fluid{
-      margin-top: 13%;
+    .rounded{
+      box-sizing: border-box;
+      height: auto;
+      width: 300px;
+      margin-top: 6%;
     }
     .text{
+      box-sizing: border-box;
       margin-top: 1%;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 19px;
+      font-size: 17px;
       padding: 0 10%;
       text-align: center;
       color: #EDE8DA;
     }
     .txt_one{
-      margin-top: 17%;
+      margin-top: 18%;
       padding: 0;
     }
   }
