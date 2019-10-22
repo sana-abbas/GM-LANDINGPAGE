@@ -33,7 +33,6 @@ body, html{
     and (min-width : 320px)
     and (max-width : 480px){
     body, html {
-      max-height: 800vh;
       background-image: url(images/background_mobile2.png);
       background-size: cover;
 
