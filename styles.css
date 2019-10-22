@@ -48,7 +48,7 @@
         box-sizing: border-box;
         height: auto;
         width: 350px;
-        margin-top: 15%;
+        margin-top: 10%;
       }
       .text{
         box-sizing: border-box;
@@ -60,7 +60,7 @@
         color: #EDE8DA;
       }
       .txt_one{
-        margin-top: 4%;
+        margin-top: 8%;
         padding: 0;
       }
     }
