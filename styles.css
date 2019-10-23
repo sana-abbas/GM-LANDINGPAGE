@@ -1,10 +1,12 @@
- body, html{
+ body{
   padding: 0;
   margin: 0;
-  height: 100%;
   background-image: url(images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
 }
 
 .container{
@@ -31,74 +33,39 @@
 @media only screen
     and (min-width : 1366px)
     and (max-width : 1900px){
-      body, html{
-        padding: 0;
-        margin: 0;
-        height: 100%;
-      }
-      .main-page{
-          height: 100%;
-          background-image: url(images/background.png);
-          background-size: cover;
-          background-repeat: no-repeat;
-          -webkit-background-size: cover !important;
-          -moz-background-size: cover !important;
-      }
       .rounded{
-        box-sizing: border-box;
-        height: auto;
-        width: 350px;
-        margin-top: 10%;
+        margin-top: 5%;
       }
       .text{
-        box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        text-align: center;
-        color: #EDE8DA;
+        font-size: 22px;
       }
       .txt_one{
-        margin-top: 8%;
-        padding: 0;
+        margin-top: 6%;
       }
     }
-
-
+    @media only screen
+        and (min-width : 706px)
+        and (max-width : 1024px){
+      .txt_one {
+      margin-top: 14%;
+      }
+    .rounded{
+      margin-top: 5%;
+     }
+   }
 @media only screen
     and (min-width : 320px)
     and (max-width : 500px){
     body{
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-      height: 100%;
-
-    }
-    .main-page{
-        height: 100%;
-        background-image: url(images/background_mobile2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover !important;
-        -moz-background-size: cover !important;
+      background-image: url(images/background_mobile2.png);
     }
     .rounded{
-      box-sizing: border-box;
-      height: auto;
       width: 300px;
       margin-top: 4%;
     }
     .text{
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-      font-style: normal;
-      font-weight: 500;
       font-size: 16px;
       padding: 0 10%;
-      text-align: center;
-      color: #EDE8DA;
     }
     .txt_one{
       margin-top: 20%;
