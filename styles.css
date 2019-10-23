@@ -45,7 +45,7 @@
     }
     @media only screen
         and (min-width : 706px)
-        and (max-width : 1024px){
+        and (max-width : 900px){
       .txt_one {
       margin-top: 14%;
       }
