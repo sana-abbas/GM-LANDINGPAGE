@@ -7,6 +7,7 @@
   background-attachment: fixed;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
+  -o-background-size: cover !important;
 }
 
 .container{
@@ -45,9 +46,12 @@
     }
     @media only screen
         and (min-width : 706px)
-        and (max-width : 900px){
+        and (max-width : 1023px){
+     body{
+         background-image: url(images/background-building.png);
+     }
       .txt_one {
-      margin-top: 14%;
+      margin-top: 4%;
       }
     .rounded{
       margin-top: 5%;
@@ -58,6 +62,7 @@
     and (max-width : 500px){
     body{
       background-image: url(images/background_mobile2.png);
+      background-size: 100% 100vh !important;
     }
     .rounded{
       width: 300px;
