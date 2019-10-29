@@ -9,7 +9,6 @@
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
 }
-
 .container{
   text-align: center;
 }
@@ -29,8 +28,22 @@
   color: #EDE8DA;
 }
 .txt_one{
-  margin-top: 4%;
+  margin-top: 5%;
 }
+@media only screen
+    and (min-width : 1901px)
+    and (max-width : 3500px){
+      .rounded{
+        margin-top: 5%;
+        width: 550px;
+      }
+      .text{
+        font-size: 2em;
+      }
+      .txt_one{
+        margin-top: 6%;
+      }
+    }
 @media only screen
     and (min-width : 1366px)
     and (max-width : 1900px){
