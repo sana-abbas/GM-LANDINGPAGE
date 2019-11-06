@@ -35,13 +35,13 @@
     and (max-width : 3500px){
       .rounded{
         margin-top: 5%;
-        width: 550px;
+        width: 500px;
       }
       .text{
-        font-size: 2em;
+        font-size: 30px;
       }
       .txt_one{
-        margin-top: 6%;
+        margin-top: 5%;
       }
     }
 @media only screen
