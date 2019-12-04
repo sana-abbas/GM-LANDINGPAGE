@@ -1,92 +1,85 @@
- body{
+body{
   padding: 0;
   margin: 0;
-  background-image: url(images/background.png);
+  overflow-x: hidden;
+}
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#header-section{
+  background-image: url('images/background-building.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
+  height: 1800px;
+  max-width: auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.container{
-  text-align: center;
+.bg-light {
+    background-color:rgba(255, 69, 0, 0.7)!important;
 }
-.rounded{
-  height: auto;
-  box-sizing: border-box;
-  width: 350px;
-}
-.text{
-  box-sizing: border-box;
-  margin-top: 1%;
-  font-family: 'Montserrat', sans-serif;
+.heading{
+  font-family: Config;
   font-style: normal;
-  font-weight: 500;
-  font-size: 19px;
+  font-weight: 300;
+  font-size: 36px;
+}
+.nav-icon{
+  width: 100px;
+  height: 60px;
+}
+.menu-icon{
+  display: none;
+  width: 120px;
+  height: 73px;
+  position: relative;
+  left: -100px;
+  z-index: 99;
+}
+.nav-list{
+  height: 100vh;
+  padding-top: 8%;
+}
+#menu{
+  background-color: #EDE8DA;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url('images/menu.png');
+  width: 2em;
+  height: 2.7em;
+}
+.navbar-light .icon-close {
+  background-image: url('images/close.png');
+  width: 2em;
+  height: 2.7em;
+  display: inline-block;
+  vertical-align: middle;
+  content: "X";
+  background-size: 100% 100%;
+}
+.nav-link{
   text-align: center;
-  color: #EDE8DA;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+  font-size: 2em;
+  padding: 15px 0;
 }
-.txt_one{
-  margin-top: 5%;
+.navbar-light .navbar-brand {
+    padding-left: 2%;
+    padding-top: 10px;
 }
-@media only screen
-    and (min-width : 1901px)
-    and (max-width : 3500px){
-      .rounded{
-        margin-top: 5%;
-        width: 500px;
-      }
-      .text{
-        font-size: 30px;
-      }
-      .txt_one{
-        margin-top: 5%;
-      }
-    }
-@media only screen
-    and (min-width : 1366px)
-    and (max-width : 1900px){
-      .rounded{
-        margin-top: 5%;
-      }
-      .text{
-        font-size: 22px;
-      }
-      .txt_one{
-        margin-top: 6%;
-      }
-    }
-    @media only screen
-        and (min-width : 706px)
-        and (max-width : 1023px){
-     body{
-         background-image: url(images/background-building.png);
-     }
-      .txt_one {
-      margin-top: 4%;
-      }
-    .rounded{
-      margin-top: 5%;
-     }
-   }
-@media only screen
-    and (min-width : 320px)
-    and (max-width : 500px){
-    body{
-      background-image: url(images/background_mobile2.png);
-      background-size: 100% 100vh !important;
-    }
-    .rounded{
-      width: 300px;
-      margin-top: 6%;
-    }
-    .text{
-      font-size: 16px;
-      padding: 0 10%;
-    }
-    .txt_one{
-      margin-top: 23%;
-      padding: 0;
-    }
-  }
+.navbar-light .navbar-toggler{
+  border: 1px solid;
+  border-radius: 30px;
+  background-color: #EDE8DA;
+  outline: none;
+  z-index: 99;
+  position: relative;
+}
