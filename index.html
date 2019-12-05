@@ -16,7 +16,6 @@
     $(document).ready(function(){
       $("button[data-toggle=collapse]").on('click', function(){
         $(this).find('span:first').toggleClass("navbar-toggler-icon icon-close");
-        $(this).css('background-color' , 'rgba(255, 69, 0, 0.7)');
         $('.menu-icon').toggle();
         });
        });
@@ -46,11 +45,26 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Aktuelles</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+              <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+               <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item" href="#">Gartenplanung & Beratung</a>
+                 <a class="dropdown-item" href="#">Gartenneubau</a>
+                 <a class="dropdown-item" href="#">Gartenumänderung</a>
+                 <a class="dropdown-item" href="#">Gartenunterhalt</a>
+                 <a class="dropdown-item" href="#">Terrassenbau</a>
+                 <a class="dropdown-item" href="#">Teich- & Poolbau</a>
+                 <a class="dropdown-item" href="#">Gartenausgestaltung</a>
+               </div>
+             </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+                <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Leitbild</a>
+                  <a class="dropdown-item" href="#">Team</a>
+                  <a class="dropdown-item" href="#">Jobs</a>
+                  <a class="dropdown-item" href="#">Infos</a>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kontakt</a>
