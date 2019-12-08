@@ -2,6 +2,10 @@
   font-family: config;
   src: url('fonts/config-medium.otf');
 }
+@font-face {
+  font-family: config-light;
+  src: url('fonts/config-light.otf');
+}
 body{
   padding: 0;
   margin: 0;
@@ -21,10 +25,10 @@ body{
   padding-right: 0px;
 }
 .bg-light {
-    background-color:rgba(255, 69, 0, 0.7)!important;
+    background-color:rgba(255, 69, 0, 0.51)!important;
 }
 .heading{
-  font-family: Config;
+  font-family: 'config-light';
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
@@ -43,7 +47,7 @@ body{
 }
 .nav-list{
   height: 100vh;
-  padding-top: 5%;
+  padding-top: 4%;
 }
 #menu{
   background-color: #EDE8DA;
@@ -55,13 +59,13 @@ body{
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url('images/menu.png');
-  width: 2em;
-  height: 2.7em;
+  width: 60px;
+  height: 60px;
 }
 .navbar-light .icon-close {
   background-image: url('images/close.png');
-  width: 2em;
-  height: 2.7em;
+  width: 60px;
+  height: 60px;
   display: inline-block;
   vertical-align: middle;
   content: "X";
@@ -75,7 +79,7 @@ body{
   font-style: normal;
   font-weight: bold;
   color: black;
-  font-size: 2.5em;
+  font-size: 2.3em;
   padding: 12px 0;
 }
 .navbar-light .navbar-brand {
@@ -83,12 +87,10 @@ body{
     padding-top: 10px;
 }
 .navbar-light .navbar-toggler{
-  border: 1px solid;
-  border-radius: 30px;
-  background-color: #EDE8DA;
+  color: transparent;
+  border-color: transparent;
   outline: none;
-  z-index: 9999;
-  position: relative;
+  z-index: 9999
 }
 .navbar-nav .dropdown-menu{
   text-align: center;
@@ -98,7 +100,7 @@ body{
   border: 1px solid transparent;
 }
 .dropdown-item{
-  font-family: Config;
+  font-family: 'config-light';
   font-size: 20px;
 }
 .dropdown-item:hover{
@@ -109,53 +111,60 @@ body{
   padding: 5%;
 }
  .flip-card {
-  background-color: transparent;
   perspective: 1000px;
   outline: none;
-  margin-left: 700px;
+  width: 400px;
+  height: 400px;
 }
 .flip-card-inner {
+  background-color: rgba(237, 232, 218, 0.85);
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  width: 300px;
-  height: 300px;
-  transition: transform 0.6s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  background-color: #ede8da;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-.flip-card:hover .flip-card-inner {
+.flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card-front, .flip-card-back {
+  position: absolute;
   backface-visibility: hidden;
-}
-.flip-card-front {
   color: black;
 }
-.name{
+.card{
+  background-color: transparent;
+  border: 1px transparent;
   position: absolute;
-  top: 100px;
-  left: 10px;
-  text-align: center;
-}
-.name-back{
-  padding-top: 20%;
+  left: 150px;
+  z-index: 99;
 }
 .flip-card-back {
-  background-color:#ede8da ;
-  color: black;
   transform: rotateY(180deg);
 }
-.arrow_next{
-    position: absolute;
-    bottom: 50%;
-    right: 0px;
-    z-index: 99;
+.carousel-control-next-icon{
+  background-image: url('images/next.png');
+  width: 77px;
+  height: 125px;
 }
-.arrow_prev{
-    position: absolute;
-    bottom: 50%;
-    z-index: 99;
+.carousel-control-prev-icon{
+  background-image: url('images/prev.png');
+  width: 77px;
+  height: 125px;
+}
+.title-front{
+  padding-top: 137px;
+  font-family: 'config-light';
+}
+.title-back{
+  padding-left: 14px;
+  padding-top: 24px;
+  padding-bottom: 50px;
+  font-family: 'config-light';
+}
+.card-para{
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: 'config-light';
 }
