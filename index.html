@@ -24,6 +24,7 @@
     $("button[data-toggle=collapse]").on('click', function(){
       $(this).find('span:first').toggleClass("icon-close navbar-toggler-icon");
       $('.menu-icon').toggle();
+      $('.heading').toggle();
     });
 
       $('.flip-card').click(function() {
@@ -71,7 +72,7 @@
                 <a class="nav-link" href="#">Aktuelles</a>
               </li>
               <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+               <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
                  <a class="dropdown-item" href="#">Gartenplanung & Beratung</a>
                  <a class="dropdown-item" href="#">Gartenneubau</a>
@@ -80,10 +81,11 @@
                  <a class="dropdown-item" href="#">Terrassenbau</a>
                  <a class="dropdown-item" href="#">Teich- & Poolbau</a>
                  <a class="dropdown-item" href="#">Gartenausgestaltung</a>
+                 <a class="dropdown-item" href="#">Spielplatzbau</a>
                </div>
              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+                <a class="nav-link dropdown-toggle uber" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
                 <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">Leitbild</a>
                   <a class="dropdown-item" href="#">Team</a>
@@ -93,6 +95,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kontakt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Impressum</a>
               </li>
             </ul>
           </div>
@@ -105,7 +110,7 @@
 
 
 
-          <div id="carouselExampleControls" class="carousel slide row" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -130,11 +135,11 @@
                 <img src="images/dummy3.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>

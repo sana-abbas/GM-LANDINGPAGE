@@ -80,7 +80,7 @@ body{
   font-style: normal;
   font-weight: bold;
   color: black;
-  font-size: 2.3em;
+  font-size: 2.4em;
   padding: 12px 0;
 }
 .navbar-light .navbar-brand {
@@ -175,4 +175,86 @@ body{
 .row{
   margin-left: 0;
   margin-right: 0;
+}
+.nav-link.dropdown-toggle.services{
+  padding-bottom: 0;
+}
+.nav-link.dropdown-toggle.uber{
+  padding-bottom: 0;
+}
+.dropdown-menu{
+  padding: 0;
+  margin: 0;
+}
+.dropdown-item{
+  padding: 0;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+.navbar{
+  padding-right: 0;
+}
+.navbar-light .navbar-brand {
+    padding-left: 0;
+}
+.nav-icon {
+    width: 65px;
+    height: 40px;
+}
+.heading{
+  font-size: 17px;
+}
+.navbar-light .navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+.navbar-light .icon-close {
+  width: 30px;
+  height: 30px;
+}
+.menu-icon {
+  width: 90px;
+  height: 50px;
+  left: -75px;
+}
+.nav-list{
+  padding-top: 32%;
+}
+.navbar-light .navbar-nav .nav-link{
+  font-size: 25px;
+}
+.dropdown-item{
+  font-size: 18px;
+}
+.card{
+  width: 250px;
+  height: 250px;
+  top: 150px;
+  left: 0;
+}
+.align-self-center{
+  align-self: auto!important;
+}
+.w-100{
+  width: auto!important;
+  height: 90vh;
+}
+.carousel-control-next , .carousel-control-prev{
+  align-items: flex-end;
+  bottom: 100px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 25px;
+  height: 40px;
+}
+.title-front{
+  font-size: 20px;
+}
+.title-back {
+    padding-bottom: 23px;
+    font-size: 20px;
+}
+.card-para{
+  margin-left: 8px;
+  font-size: 13px;
+}
 }
