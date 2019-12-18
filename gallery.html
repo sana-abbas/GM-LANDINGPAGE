@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
@@ -37,7 +36,7 @@
 <body>
     <div class="container-fluid header-section" id="header-section">
       <header>
-        <nav class="navbar fixed-top navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light">
           <div class="navbar-brand">
             <img src="images/nav-icon.png" alt="logo" class="nav-icon">
             <img src="images/menu-icon.png" alt="logo" class="menu-icon">
@@ -52,10 +51,10 @@
 
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-list">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="events.html">Aktuelles</a>
+                <a class="nav-link" href="#">Aktuelles</a>
               </li>
               <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
@@ -92,50 +91,38 @@
 
       <main>
 
-        <section class="get-started">
+        <section>
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div class="events-images">
 
-            <div class="flip-card card col-lg-4 align-self-center">
-              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
-                <div class="flip-card-front">
-                  <img src="images/menu-icon.png" alt="" class="menu-icon-2">
+            <div id="carouselExampleControls" class="carousel carousel-events slide" data-ride="carousel">
+
+              <div class="carousel-inner events-inner">
+                <div class="carousel-item events active">
+                  <span><a href="events.html"><img src="images/close.png" class="close" alt=""></a></span>
+                  <img src="images/event_1.png" class="d-block img-event img-fluid" alt="...">
                 </div>
-                <div class="flip-card-back">
-                  <p class="card-title card-para">Lieber Kunde, zukünftiger Kunde oder Neugieriger</p>
-                  <p class="card-title card-para">Wir freuen uns Sie auf der Homepage der Gartenmanufactur AG begrüssen zu dürfen.Wir sind ein junges und dynamisches Unternehmen welches sämtliche Gartenbaudienstleistungen für Sie ausführt.</p>
-                  <p class="card-title card-para">Unsere Gärten sind explizit auf Sie persönlich zugeschnitten und werden mit grösster Sorgfalt und Fachwissen für Sie gebaut. Ebenfalls kümmern wir uns liebevoll um Ihren Garten.</p>
-                  <p class="card-title card-para">Wir wünschen Ihnen nun viel Freude beim durchstöbern unserer Website und freuen uns von Ihnen zu hören, damit wir Sie persönlich von unseren Gärten begeistern können.</p>
+                <div class="carousel-item events">
+                  <span><a href="events.html"><img src="images/close.png" class="close" alt=""></a></span>
+                  <img src="images/event_2.png" class="d-block img-event img-fluid" alt="...">
+                </div>
+                <div class="carousel-item events">
+                  <span><a href="events.html"><img src="images/close.png" class="close" alt=""></a></span>
+                  <img src="images/event_3.png" class="d-block img-event img-fluid" alt="...">
                 </div>
               </div>
-            </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
-            </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+              <a class="carousel-control-prev gallery-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next gallery-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
 
           </div>
-
         </section>
-      </div>
 
-
-    </main>
-  </body>
-</html>
+      </main>
+    </body>
+  </html>
