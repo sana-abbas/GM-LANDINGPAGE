@@ -16,9 +16,6 @@ body{
   padding-right: 0px;
 }
 #header-section{
-  background-image: url('images/background-building.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   max-width: auto;
   padding-left: 0px;
   padding-right: 0px;
@@ -112,11 +109,26 @@ body{
 .slider{
   padding: 5%;
 }
+.first{
+  background-image: url('images/home.png');
+  height: 100vh;
+  background-size: cover;
+}
+.second{
+  background-image: url('images/leaf.png');
+  height: 100vh;
+  background-size: cover;
+}
+.third{
+  background-image: url('images/background-events.png');
+  height: 100vh;
+  background-size: cover;
+}
  .flip-card {
   perspective: 1000px;
   outline: none;
-  width: 650px;
-  height: 400px;
+  width: 550px;
+  height: 450px;
 }
  .flip-card-3 {
   perspective: 1000px;
@@ -150,7 +162,7 @@ body{
   background-color: transparent;
   border: 1px transparent;
   position: absolute;
-  left: 160px;
+  left: 170px;
   z-index: 99;
 }
 .flip-card-back {
@@ -179,8 +191,9 @@ body{
 .card-para{
   font-size: 18px;
   font-family: 'Open Sans';
+  padding: 0 3%;
 }
-.col{
+.col, .col-lg-4{
   padding-left: 0;
   padding-right: 0;
 }
@@ -202,7 +215,7 @@ body{
   padding: 0;
 }
 .event{
-  background-image: url('images/background-events.png');
+  background-image: url('images/home.png');
   width: 100%;
   background-size: cover;
 }
@@ -211,7 +224,7 @@ body{
   padding: 15% 5%;
 }
 .events-images{
-  background-image: url('images/leaf.png');
+  background-image: url('images/home.png');
   height: 100vh;
   background-size: cover;
 }
@@ -254,6 +267,20 @@ body{
 
 
 
+@media only screen and (max-width : 1024px) {
+  .flip-card{
+    height: 435px;
+    width: 435px;
+  }
+  .menu-icon-2{
+    width: 300px;
+  }
+  .card-para{
+    font-size: 15px;
+  }
+}
+
+
 
 
 
@@ -294,8 +321,8 @@ body{
   font-size: 18px;
 }
 .card{
-  width: 250px;
-  height: 250px;
+  width: 275px;
+  height: 400px;
   top: 150px;
   left: 50%;
   transform: translate(-50%, 0px);
@@ -306,9 +333,17 @@ body{
 .w-100{
   width: auto!important;
 }
-.carousel-control-next , .carousel-control-prev, .arrow_next, .arrow_prev{
+.first{
+  background-image: url('images/home-mobile.jpg');
+  background-size: cover;
+}
+.carousel-control-next , .carousel-control-prev{
   align-items: flex-end;
-  bottom: -50px;
+  bottom: 100px;
+}
+.gallery-next, .gallery-prev{
+  align-items: flex-end;
+  bottom: -50px!important;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
   width: 25px;
@@ -318,18 +353,15 @@ body{
   width: 25px;
   height: 40px;
   align-items: flex-end;
-  bottom: 80px;
+  bottom: 100px;
 }
-.title-front{
-  font-size: 20px;
-}
-.title-back {
-    padding-bottom: 23px;
-    font-size: 20px;
+.menu-icon-2{
+  width: 230px;
+  height: 180px;
 }
 .card-para{
   margin-left: 8px;
-  font-size: 13px;
+  font-size: 12px;
 }
 .flip-card-3{
   width: 250px;
@@ -348,5 +380,8 @@ body{
   height: 100%;
   height: -webkit-fill-available;
   height: -moz-fill-available;
+}
+.event, .events-images{
+  background-image: url('images/home-mobile.jpg');
 }
 }
