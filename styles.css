@@ -264,6 +264,21 @@ body{
   width: 70px;
   height: 120px;
 }
+.service-list{
+  list-style-type: none;
+  padding: 0;
+  padding-top: 20px;
+}
+.service-para{
+  padding: 25px 7%;
+}
+.contact-button{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 110px;
+  height: 80px;
+}
 
 
 
