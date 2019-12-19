@@ -8,23 +8,35 @@
 <title>Gartenmanufactur AG | Coming Soon</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <!-- <script type="text/javascript" src="flip/src/justFlipIt.min.js"></script> -->
 <link rel="stylesheet" href="styles.css">
 <script>
   $(document).ready(function(){
+    $('.dropdown-item').click(function(){
+       $('.navbar-collapse').collapse('hide');
+        $('.menu-icon').toggle();
+        $('.heading').toggle();
+        // $('.navbar-toggler-icon').toggle();
+        // $('button[data-toggle=collapse]').toggleClass("navbar-toggler-icon icon-close");
+     });
+
     $("button[data-toggle=collapse]").on('click', function(){
       $(this).find('span:first').toggleClass("icon-close navbar-toggler-icon");
       $('.menu-icon').toggle();
       $('.heading').toggle();
+    });
+
+    $(".garetenplanung").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".garetenplanung-main").offset().top
+      }, 1500);
     });
 
     //   $('.flip-card').click(function() {
@@ -60,14 +72,14 @@
               <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="#">Gartenplanung & Beratung</a>
-                 <a class="dropdown-item" href="#">Gartenneubau</a>
-                 <a class="dropdown-item" href="#">Gartenumänderung</a>
-                 <a class="dropdown-item" href="#">Gartenunterhalt</a>
-                 <a class="dropdown-item" href="#">Terrassenbau</a>
-                 <a class="dropdown-item" href="#">Teich- & Poolbau</a>
-                 <a class="dropdown-item" href="#">Gartenausgestaltung</a>
-                 <a class="dropdown-item" href="#">Spielplatzbau</a>
+                 <a class="dropdown-item garetenplanung" href="javascript:void(0)">Gartenplanung & Beratung</a>
+                 <a class="dropdown-item gartenneubau" href="javascript:void(0)">Gartenneubau</a>
+                 <a class="dropdown-item gartenumänderung" href="javascript:void(0)">Gartenumänderung</a>
+                 <a class="dropdown-item gartenunterhalt" href="javascript:void(0)">Gartenunterhalt</a>
+                 <a class="dropdown-item terrassenbau" href="javascript:void(0)">Terrassenbau</a>
+                 <a class="dropdown-item teich" href="javascript:void(0)">Teich- & Poolbau</a>
+                 <a class="dropdown-item gartenausgestaltung" href="javascript:void(0)">Gartenausgestaltung</a>
+                 <a class="dropdown-item spielplatzbau" href="javascript:void(0)">Spielplatzbau</a>
                </div>
              </li>
               <li class="nav-item dropdown">
@@ -137,7 +149,9 @@
 
         <section class="services">
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+        <!-- Gartenplanung -->
+
+          <div id="carouselExampleControls" class="carousel garetenplanung-main slide row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -184,7 +198,367 @@
             <img src="images/contact-button.png" alt="" class="contact-button">
           </div>
 
+        </div>
+
+        <!-- Gartenneubau -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Gartenneubau</h3>
+                  <p class="card-title card-para service-para">Wir bauen und gestalten Ihren Garten nach Ihren Wünschen und Bedürfnissen. Wir legen Wert auf einen praktischen und langlebigen Garten der durch seine Schönheit auffällt.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Abbrucharbeiten</h6></li>
+                    <li class="card-title"><h6>-Erdarbeiten</h6></li>
+                    <li class="card-title"><h6>-Kanalisation & Entwässerungen</h6></li>
+                    <li class="card-title"><h6>-Sämtliche Belagsarbeiten</h6></li>
+                    <li class="card-title"><h6>-Sichtschutz</h6></li>
+                    <li class="card-title"><h6>-Mauern & Treppen</h6></li>
+                    <li class="card-title"><h6>-Begrünungen</h6></li>
+                    <li class="card-title"><h6>-Bepflanzungen</h6></li>
+                    <li class="card-title"><h6>-Diverse Austattungen</h6></li>
+                    <li class="card-title"><h6>-Erstellungspflege</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
           </div>
+
+        </div>
+
+        <!-- Gartenumänderung -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Gartenumänderung</h3>
+                  <p class="card-title card-para service-para">Aus Alt wird Neu. Wir ändern Ihren bestehenden Garten nach Ihren Wünschen und Bedürfnissen. Wir lassen neue Ideen und Trends einfliessen, ohne den Charakter des bestehenden Gartens zu vergessen.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Abbrucharbeiten</h6></li>
+                    <li class="card-title"><h6>-Rodungen</h6></li>
+                    <li class="card-title"><h6>-Terrainveränderungen</h6></li>
+                    <li class="card-title"><h6>-Belagssanierungen</h6></li>
+                    <li class="card-title"><h6>-Reinigungen von diversen Bauteile</h6></li>
+                    <li class="card-title"><h6>-Komplett- & Teilsanierungen</h6></li>
+                    <li class="card-title"><h6>-Bepflanzungserneuerungen</h6></li>
+                    <li class="card-title"><h6>-Grünflächenumnutzung</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
+
+        <!-- Gartenunterhalt -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Gartenunterhalt</h3>
+                  <p class="card-title card-para service-para">Damit der Garten seinen Reiz und Schönheit behält braucht es Pflege und Fachwissen. Wir kümmern uns mit Liebe zum Detail um Ihren Garten. Nach Wunsch können Jahresabos nach Ihren Bedürfnissen abgeschlossen werden, damit Sie zu jeder Jahreszeit Ihren Garten geniessen können.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Sträucher & Baumschnit</h6></li>
+                    <li class="card-title"><h6>-Staudenpflege</h6></li>
+                    <li class="card-title"><h6>-Rasenpflege</h6></li>
+                    <li class="card-title"><h6>-Rasensanierungen</h6></li>
+                    <li class="card-title"><h6>-Blumenwiesebetreuung</h6></li>
+                    <li class="card-title"><h6>-Pflanzenschutz (chemisch& biologisch)</h6></li>
+                    <li class="card-title"><h6>-Winterdienst</h6></li>
+                    <li class="card-title"><h6>-Weihnachtsdekorationen</h6></li>
+                    <li class="card-title"><h6>-Feriendienst</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
+
+        <!-- Terrassenbau -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Terrassenbau</h3>
+                  <p class="card-title card-para service-para">Wohnen auf Dächern wird durch das verdichtete Bauen immer mehr zum Thema. Damit Sie nicht auf Ihren Garten verzichten müssen gestalten wir Ihre Terrasse zu einem Aussenraum der einem Garten in nichts nachsteht. Wir verfügen über das technische Know-How und kennen die Herausforderungen die eine Terrasse mit sich bringt. Durch die Partnerschaft mit der Firma Hablützel verfügen wir über die nötigen Maschinen um grosse Höhen einfach überwinden zu können.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Terassenneubau</h6></li>
+                    <li class="card-title"><h6>-Terassensanierung</h6></li>
+                    <li class="card-title"><h6>-Entwässerungen</h6></li>
+                    <li class="card-title"><h6>-Pflanztröge</h6></li>
+                    <li class="card-title"><h6>-Bepflanzungen</h6></li>
+                    <li class="card-title"><h6>-Bewässerungen</h6></li>
+                    <li class="card-title"><h6>-Beleuchtungen</h6></li>
+                    <li class="card-title"><h6>-Sonnenschutz</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
+
+        <!-- Teich- und Poolbau -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Teich- und Poolbau</h3>
+                  <p class="card-title card-para service-para">Wasser belebt den Garten. Es bringt wunderschön entspannende Symphonien in den Garten, sei dies durch das Plätschern eines Wasserspiels oder durch die Musik der Teichtiere. Ein Sprung in den Pool oder Schwimmteich bringt eine kühle Erfrischung. Wir beraten Sie und bauen gerne Ihren Teich oder Pool, damit wir ins Schwitzen kommen und nicht Sie.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Planung</h6></li>
+                    <li class="card-title"><h6>-Neuerstellung von Teich & Pools</h6></li>
+                    <li class="card-title"><h6>-Teich & Pool Sanierungen</h6></li>
+                    <li class="card-title"><h6>-Reinigung</h6></li>
+                    <li class="card-title"><h6>-Wasserproben</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
+
+        <!-- Gartenausgestaltung -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Gartenausgestaltung</h3>
+                  <p class="card-title card-para service-para">Wir schaffen Ambiente. Wir statten Ihren Garten mit den passenden Möbeln und Accessoires aus, damit Sie Ihren Garten optimal nutzen können. Ebenfalls schaffen wir durch Licht und Musik ein Ambiente für viele schöne Momente. Nicht zu vergessen, unsere praktischen Gadgets die Ihre Gartenarbeit erleichtern.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Gartenbeleuchtung</h6></li>
+                    <li class="card-title"><h6>-Ausstattungen</h6></li>
+                    <li class="card-title"><h6>-Sonnenschutz</h6></li>
+                    <li class="card-title"><h6>-Bewässerungen</h6></li>
+                    <li class="card-title"><h6>-Wasserspiele & Brunnen</h6></li>
+                    <li class="card-title"><h6>-Möblierungen</h6></li>
+                    <li class="card-title"><h6>-Skulpturen</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
+
+        <!-- Spielplatzbau -->
+
+          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+
+            <div class="flip-card card col-lg-4 align-self-center">
+              <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="flip-card-front">
+                  <h3 class="card-title">Spielplatzbau</h3>
+                  <p class="card-title card-para service-para">Gärten die Kinder lieben! Wir bauen für die Kleinen unter uns. Spiel und Spass, Platz für kreative Ideen und ein Ort für Begegnungen bedeutet Spielplatz für uns. Wir bauen und unterhalten die Spielplätze nach den neusten Normen des BFU und sind stets auf die Sicherheit der Kinder bedacht.</p>
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="card-title">Diensleistungen</h3>
+                  <ul class="service-list">
+                    <li class="card-title"><h6>-Planung</h6></li>
+                    <li class="card-title"><h6>-Spielplatz Neubau</h6></li>
+                    <li class="card-title"><h6>-Spielplatz Sanierungen</h6></li>
+                    <li class="card-title"><h6>-Spielplatz Pflege</h6></li>
+                    <li class="card-title"><h6>-Spielplatz Inspektionen</h6></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-inner col">
+              <div class="carousel-item active">
+                <div class="d-block w-100 first"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-block w-100 second"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="third d-block w-100"></div>
+              </div>
+            </div>
+            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          <div class="contact-button">
+            <img src="images/contact-button.png" alt="" class="contact-button">
+          </div>
+
+        </div>
 
         </section>
 

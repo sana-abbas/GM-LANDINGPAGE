@@ -115,7 +115,7 @@ body{
   background-size: cover;
 }
 .second{
-  background-image: url('images/leaf.png');
+  background-image: url('images/background-building.png');
   height: 100vh;
   background-size: cover;
 }
@@ -172,11 +172,15 @@ body{
   background-image: url('images/next.png');
   width: 75px;
   height: 128px;
+  position: absolute;
+  right: 20px;
 }
 .carousel-control-prev-icon{
   width: 75px;
   height: 128px;
   background-image: url('images/prev.png');
+  position: absolute;
+  left: 20px;
 }
 .card-body{
   padding: 0;
