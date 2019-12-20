@@ -106,9 +106,6 @@ body{
    color: rgba(0,0,0,.7);
    background-color:#ede8da;
 }
-.slider{
-  padding: 5%;
-}
 .first{
   background-image: url('images/home.png');
   height: 100vh;
@@ -189,8 +186,8 @@ body{
   width: 350px;
   height: 230px;
 }
-.title-back{
-  font-family: 'config-light';
+.card-title{
+  font-family: 'config';
 }
 .card-para{
   font-size: 18px;
@@ -227,7 +224,7 @@ body{
   height: 100vh;
   padding: 15% 5%;
 }
-.events-images{
+.events-images, .team{
   background-image: url('images/home.png');
   height: 100vh;
   background-size: cover;
@@ -283,6 +280,34 @@ body{
   width: 110px;
   height: 80px;
 }
+.flip-card-4{
+  perspective: 1000px;
+  outline: none;
+  width: 700px;
+  height: 500px;
+}
+.card-4{
+  background-color: transparent;
+  border: 1px transparent;
+  position: absolute;
+  z-index: 99;
+}
+.card-5{
+  background-color: transparent;
+  border: 1px transparent;
+  z-index: 99;
+}
+.rounded-img{
+  width: 200px;
+  height: 200px;
+}
+.slick-slide img{
+  display: initial;
+}
+.slider-team{
+  height: 100vh;
+  padding: 10% 5%;
+}
 
 
 
@@ -296,6 +321,14 @@ body{
   }
   .card-para{
     font-size: 15px;
+  }
+  .flip-card-4{
+    height: 435px;
+    width: 525px;
+  }
+  .slider-team{
+    height: 100vh;
+    padding: 15% 5%;
   }
 }
 
@@ -339,7 +372,7 @@ body{
 .dropdown-item{
   font-size: 18px;
 }
-.card{
+.card,.card-4{
   width: 275px;
   height: 400px;
   top: 150px;
@@ -365,7 +398,7 @@ body{
   bottom: -50px!important;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
-  width: 25px;
+  width: 15px;
   height: 40px;
 }
 .arrow_next, .arrow_prev{
@@ -402,5 +435,10 @@ body{
 }
 .event, .events-images{
   background-image: url('images/home-mobile.jpg');
+}
+.contact-button{
+  width: 70px;
+  height: 60px;
+  right: auto!important;
 }
 }
