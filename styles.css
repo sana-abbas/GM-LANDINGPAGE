@@ -374,7 +374,7 @@ body{
 }
 .card,.card-4{
   width: 275px;
-  height: 400px;
+  height: 380px;
   top: 150px;
   left: 50%;
   transform: translate(-50%, 0px);
@@ -440,5 +440,12 @@ body{
   width: 70px;
   height: 60px;
   right: auto!important;
+}
+.rounded-img{
+  width: 150px;
+  height: 150px;
+}
+.flip-card-4{
+  height: 400px;
 }
 }
