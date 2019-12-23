@@ -23,8 +23,7 @@
        $('.navbar-collapse').collapse('hide');
         $('.menu-icon').toggle();
         $('.heading').toggle();
-        // $('.navbar-toggler-icon').toggle();
-        // $('button[data-toggle=collapse]').toggleClass("navbar-toggler-icon icon-close");
+        $(".navbar-toggler").find('span:first').toggleClass("icon-close navbar-toggler-icon");
      });
 
     $("button[data-toggle=collapse]").on('click', function(){
@@ -33,9 +32,69 @@
       $('.heading').toggle();
     });
 
-    $(".garetenplanung").click(function() {
+    $(".gartenplanung").click(function() {
       $('html, body').animate({
-        scrollTop: $(".garetenplanung-main").offset().top
+        scrollTop: $(".gartenplanung-main").offset().top
+      }, 1500);
+    });
+
+    $(".teich").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".teich-main").offset().top
+      }, 1500);
+    });
+
+    $(".gartenausgestaltung").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".gartenausgestaltung-main").offset().top
+      }, 1500);
+    });
+
+    $(".gartenumänderung").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".gartenumänderung-main").offset().top
+      }, 1500);
+    });
+
+    $(".gartenunterhalt").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".gartenunterhalt-main").offset().top
+      }, 1500);
+    });
+
+    $(".spielplatzbau").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".spielplatzbau-main").offset().top
+      }, 1500);
+    });
+
+    $(".terrassenbau").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".terrassenbau-main").offset().top
+      }, 1500);
+    });
+
+    $(".gartenneubau").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".gartenneubau-main").offset().top
+      }, 1500);
+    });
+
+    $(".leitbild").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".leitbild-main").offset().top
+      }, 1500);
+    });
+
+    $(".team").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".team-main").offset().top
+      }, 1500);
+    });
+
+    $(".jobs").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".jobs-main").offset().top
       }, 1500);
     });
 
@@ -100,7 +159,7 @@
               <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item garetenplanung" href="javascript:void(0)">Gartenplanung & Beratung</a>
+                 <a class="dropdown-item gartenplanung" href="javascript:void(0)">Gartenplanung & Beratung</a>
                  <a class="dropdown-item gartenneubau" href="javascript:void(0)">Gartenneubau</a>
                  <a class="dropdown-item gartenumänderung" href="javascript:void(0)">Gartenumänderung</a>
                  <a class="dropdown-item gartenunterhalt" href="javascript:void(0)">Gartenunterhalt</a>
@@ -111,12 +170,12 @@
                </div>
              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle uber" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
                 <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Leitbild</a>
-                  <a class="dropdown-item" href="#">Team</a>
-                  <a class="dropdown-item" href="#">Jobs</a>
-                  <a class="dropdown-item" href="#">Bildergalerie</a>
+                  <a class="dropdown-item leitbild" href="javascript:void(0)">Leitbild</a>
+                  <a class="dropdown-item team" href="javascript:void(0)">Team</a>
+                  <a class="dropdown-item jobs" href="javascript:void(0)">Jobs</a>
+                  <a class="dropdown-item" href="javascript:void(0)">Bildergalerie</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -179,7 +238,7 @@
 
         <!-- Gartenplanung -->
 
-          <div id="carouselExampleControls" class="carousel garetenplanung-main slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel gartenplanung-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -230,7 +289,7 @@
 
         <!-- Gartenneubau -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel gartenneubau-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -284,7 +343,7 @@
 
         <!-- Gartenumänderung -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel gartenumänderung-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -336,7 +395,7 @@
 
         <!-- Gartenunterhalt -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel gartenunterhalt-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -389,7 +448,7 @@
 
         <!-- Terrassenbau -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel terrassenbau-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -441,7 +500,7 @@
 
         <!-- Teich- und Poolbau -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel teich-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -490,7 +549,7 @@
 
         <!-- Gartenausgestaltung -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel gartenausgestaltung-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -541,7 +600,7 @@
 
         <!-- Spielplatzbau -->
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel spielplatzbau-main row d-flex justify-content-center" data-ride="carousel">
 
             <div class="flip-card card col-lg-4 align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
@@ -592,7 +651,7 @@
 
         <!-- Leitbild -->
 
-        <section class="leitbild">
+        <section class="leitbild-main">
 
           <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
 
@@ -631,7 +690,7 @@
 
         <section class="team">
 
-          <div class="slider-team">
+          <div class="slider-team team-main">
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
               <div class="flip-card-4 card-5 align-self-center">
@@ -666,7 +725,7 @@
 
         <section class="jobs">
 
-            <div class="container-fluid row d-flex align-items-center justify-content-center main-jobs">
+            <div class="container-fluid jobs-main row d-flex align-items-center justify-content-center main-jobs">
               <div class="flip-card-4 align-self-center">
                 <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
