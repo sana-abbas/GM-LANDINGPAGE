@@ -15,23 +15,20 @@ body{
   padding-left: 0px;
   padding-right: 0px;
 }
-#header-section{
-  max-width: auto;
-  padding-left: 0px;
-  padding-right: 0px;
+.col, .col-lg-4{
+  padding-left: 0;
+  padding-right: 0;
 }
-/* .w-100{
-  height: 100vh;
-} */
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Nav Bar */
+
 .bg-light {
   background-color:rgba(255, 69, 0, 0.51)!important;
   box-shadow: -30px -30px 20px rgba(0, 0, 0, 0.4), inset -5px -5px 20px rgba(0, 0, 0, 0.25);
-}
-.heading{
-  font-family: 'config-light';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 36px;
 }
 .nav-icon{
   width: 100px;
@@ -106,6 +103,33 @@ body{
    color: rgba(0,0,0,.7);
    background-color:#ede8da;
 }
+.nav-link.dropdown-toggle.services{
+  padding-bottom: 0;
+}
+.nav-link.dropdown-toggle.uber{
+  padding-bottom: 0;
+}
+.dropdown-menu{
+  padding: 0;
+  margin: 0;
+}
+.dropdown-item{
+  padding: 0;
+}
+
+/* Header Section */
+
+#header-section{
+  max-width: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.heading{
+  font-family: 'config-light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+}
 .first{
   background-image: url('images/home.png');
   height: 100vh;
@@ -126,12 +150,6 @@ body{
   outline: none;
   width: 550px;
   height: 450px;
-}
- .flip-card-3 {
-  perspective: 1000px;
-  outline: none;
-  width: 325px;
-  height: 325px;
 }
 .flip-card-inner {
   background-color: rgba(237, 232, 218, 0.6);
@@ -194,27 +212,9 @@ body{
   font-family: 'Open Sans';
   padding: 0 3%;
 }
-.col, .col-lg-4{
-  padding-left: 0;
-  padding-right: 0;
-}
-.row{
-  margin-left: 0;
-  margin-right: 0;
-}
-.nav-link.dropdown-toggle.services{
-  padding-bottom: 0;
-}
-.nav-link.dropdown-toggle.uber{
-  padding-bottom: 0;
-}
-.dropdown-menu{
-  padding: 0;
-  margin: 0;
-}
-.dropdown-item{
-  padding: 0;
-}
+
+/* Event Section */
+
 .event{
   background-image: url('images/home.png');
   width: 100%;
@@ -224,7 +224,13 @@ body{
   height: 100vh;
   padding: 15% 5%;
 }
-.events-images, .team{
+.flip-card-3 {
+ perspective: 1000px;
+ outline: none;
+ width: 325px;
+ height: 325px;
+}
+.events-images, .team, .jobs{
   background-image: url('images/home.png');
   height: 100vh;
   background-size: cover;
@@ -251,20 +257,23 @@ body{
 }
 .arrow_next{
   position: absolute;
-  bottom: 42%;
-  right: 8px;
+  bottom: 40%;
+  right: 20px;
   z-index: 99;
   width: 70px;
   height: 120px;
 }
 .arrow_prev{
   position: absolute;
-  bottom: 42%;
-  left: 8px;
+  bottom: 40%;
+  left: 20px;
   z-index: 99;
   width: 70px;
   height: 120px;
 }
+
+/* Services Section */
+
 .service-list{
   list-style-type: none;
   padding: 0;
@@ -280,6 +289,9 @@ body{
   width: 110px;
   height: 80px;
 }
+
+/* Leitbild Section */
+
 .flip-card-4{
   perspective: 1000px;
   outline: none;
@@ -292,6 +304,9 @@ body{
   position: absolute;
   z-index: 99;
 }
+
+/* Team Section */
+
 .card-5{
   background-color: transparent;
   border: 1px transparent;
@@ -306,10 +321,16 @@ body{
 }
 .slider-team{
   height: 100vh;
-  padding: 10% 5%;
+  padding: 11% 0%;
 }
 
+/* Jobs Section */
 
+.main-jobs{
+  transform: translate(0%, 30%);
+}
+
+/* Small Laptop and Tablets Breakpoint */
 
 @media only screen and (max-width : 1024px) {
   .flip-card{
@@ -322,19 +343,20 @@ body{
   .card-para{
     font-size: 15px;
   }
+  .slider{
+    padding: 20% 5%;
+  }
   .flip-card-4{
     height: 435px;
     width: 525px;
   }
   .slider-team{
     height: 100vh;
-    padding: 15% 5%;
+    padding: 15% 0%;
   }
 }
 
-
-
-
+/* Mobile Breakpoint */
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 .navbar{
@@ -375,7 +397,7 @@ body{
 .card,.card-4{
   width: 275px;
   height: 380px;
-  top: 150px;
+  top: 130px;
   left: 50%;
   transform: translate(-50%, 0px);
 }
@@ -385,7 +407,7 @@ body{
 .w-100{
   width: auto!important;
 }
-.first{
+.first, .slider-team, .jobs{
   background-image: url('images/home-mobile.jpg');
   background-size: cover;
 }
@@ -402,7 +424,7 @@ body{
   height: 40px;
 }
 .arrow_next, .arrow_prev{
-  width: 25px;
+  width: 15px;
   height: 40px;
   align-items: flex-end;
   bottom: 100px;
@@ -428,10 +450,8 @@ body{
   right: 0;
   width: 30px;
 }
-.slick-initialized .slick-slide {
-  height: 100%;
-  height: -webkit-fill-available;
-  height: -moz-fill-available;
+.slider{
+  padding: 35% 5%;
 }
 .event, .events-images{
   background-image: url('images/home-mobile.jpg');
@@ -446,6 +466,11 @@ body{
   height: 150px;
 }
 .flip-card-4{
-  height: 400px;
+  width: 275px;
+  height: 380px;
+}
+.slider-team{
+  height: 100vh;
+  padding: 30% 0%;
 }
 }

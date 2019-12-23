@@ -48,6 +48,23 @@
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
+      responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1 ,
+    }
+  }
+]
     });
 
     //   $('.flip-card').click(function() {
@@ -573,6 +590,8 @@
 
         </section>
 
+        <!-- Leitbild -->
+
         <section class="leitbild">
 
           <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
@@ -608,6 +627,8 @@
 
         </section>
 
+        <!-- Team -->
+
         <section class="team">
 
           <div class="slider-team">
@@ -626,7 +647,7 @@
             </div>
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
-              <div class="flip-card-4 card-5 align-self-center">
+              <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
                 <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <img src="images/jane.png" alt="" class="rounded-img">
@@ -641,6 +662,24 @@
           </div>
         </section>
 
+        <!-- Jobs -->
+
+        <section class="jobs">
+
+            <div class="container-fluid row d-flex align-items-center justify-content-center main-jobs">
+              <div class="flip-card-4 align-self-center">
+                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                  <div class="flip-card-front">
+                    <h2 class="card-title">Jobs</h2>
+                    <p class="card-para">Wir sind immer interessiert an gut ausgebildeten Berufsfachleuten, die Freude daran haben schöne Gärten zu bauen und pflegen.</p>
+                    <p class="card-para">Haben Sie interesse?</p>
+                    <p class="card-para">Kontaktieren Sie uns.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </section>
 
     </main>
   </body>
