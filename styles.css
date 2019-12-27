@@ -288,6 +288,15 @@ body{
   right: 50px;
   width: 110px;
   height: 80px;
+  z-index: 20;
+}
+.contact-img{
+  width: 110px;
+  height: 80px;
+  z-index: 20;
+  margin-right: 75px;
+  margin-top: 145px;
+  float: right;
 }
 
 /* Leitbild Section */
@@ -330,6 +339,53 @@ body{
   transform: translate(0%, 30%);
 }
 
+/* Form Section */
+
+.myForm{
+  background-image: url('images/home.png');
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5%;
+}
+.form{
+  background-color: rgba(237, 232, 218, 0.6);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  width: 80%;
+  height: 90%;
+}
+.form-heading{
+  padding: 2% 3%;
+}
+.form-control{
+  background-color: transparent;
+  border: 0;
+  color: black;
+  margin-left: 4%;
+  width: 90%;
+  border-bottom: 3px solid #FF4500;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  outline: none;
+}
+.form-control::-webkit-input-placeholder{
+   color: black;
+}
+.select{
+  width: 95%;
+  margin-left: 2%;
+}
+.submit-btn{
+  /* border: 3px solid #FF4500; */
+  text-align: center;
+  background-color: rgba(255, 69, 0, 0.51);
+  margin: 0 auto;
+  padding: 1% 20%;
+  font-size: 20px;
+  margin-top: 1%;
+}
+.submit-btn:hover{
+  background-color: rgba(255, 69, 0);
+}
+
 /* Small Laptop and Tablets Breakpoint */
 
 @media only screen and (max-width : 1024px) {
@@ -353,6 +409,16 @@ body{
   .slider-team{
     height: 100vh;
     padding: 15% 0%;
+  }
+  .contact-button{
+    right: 30px;
+    bottom: 30px;
+  }
+  .myForm{
+    padding-top: 10%;
+  }
+  .form{
+    height: 95%;
   }
 }
 
@@ -460,6 +526,12 @@ body{
   width: 70px;
   height: 60px;
   right: auto!important;
+  bottom: 50px!important;
+}
+.contact-img{
+  width: 70px;
+  height: 60px;
+  margin-right: 40%;
 }
 .rounded-img{
   width: 150px;

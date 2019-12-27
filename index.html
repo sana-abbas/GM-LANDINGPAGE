@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="styles.css">
 <script>
   $(document).ready(function(){
-    $('.dropdown-item').click(function(){
+    $('.dropdown-item, #home, #kontakt').click(function(){
        $('.navbar-collapse').collapse('hide');
         $('.menu-icon').toggle();
         $('.heading').toggle();
@@ -80,23 +80,43 @@
       }, 1500);
     });
 
-    $(".leitbild").click(function() {
+    $("#leitbild").click(function() {
       $('html, body').animate({
         scrollTop: $(".leitbild-main").offset().top
       }, 1500);
     });
 
-    $(".team").click(function() {
+    $("#team").click(function() {
       $('html, body').animate({
         scrollTop: $(".team-main").offset().top
       }, 1500);
     });
 
-    $(".jobs").click(function() {
+    $("#jobs").click(function() {
       $('html, body').animate({
-        scrollTop: $(".jobs-main").offset().top
+        scrollTop: $(".jobs").offset().top
       }, 1500);
     });
+
+    $("#kontakt").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".myForm").offset().top
+      }, 1500);
+    });
+
+    $(".contact").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".myForm").offset().top
+      }, 1500);
+    });
+
+    $("#home").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#header-section").offset().top
+      }, 1500);
+    });
+
+
 
     $('.slider-team').slick({
       dots:false,
@@ -138,7 +158,7 @@
       <div class="container-fluid header-section" id="header-section">
         <nav class="navbar fixed-top navbar-light bg-light">
           <div class="navbar-brand">
-            <img src="images/nav-icon.png" alt="logo" class="nav-icon">
+            <a href="#"><img src="images/nav-icon.png" alt="logo" class="nav-icon"></a>
             <img src="images/menu-icon.png" alt="logo" class="menu-icon">
           </div>
           <span class="heading align-items-center">Gärten die begeistern</span>
@@ -151,7 +171,7 @@
 
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-list">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" id="home" href="javascript:void(0)">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="events.html">Aktuelles</a>
@@ -172,14 +192,14 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
                 <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item leitbild" href="javascript:void(0)">Leitbild</a>
-                  <a class="dropdown-item team" href="javascript:void(0)">Team</a>
-                  <a class="dropdown-item jobs" href="javascript:void(0)">Jobs</a>
+                  <a class="dropdown-item" id="leitbild" href="javascript:void(0)">Leitbild</a>
+                  <a class="dropdown-item" id="team" href="javascript:void(0)">Team</a>
+                  <a class="dropdown-item" id="jobs" href="javascript:void(0)">Jobs</a>
                   <a class="dropdown-item" href="javascript:void(0)">Bildergalerie</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Kontakt</a>
+                <a class="nav-link" id="kontakt" href="#">Kontakt</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Impressum</a>
@@ -282,7 +302,7 @@
             </a>
 
           <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
+          <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
           </div>
 
         </div>
@@ -335,9 +355,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -387,9 +407,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -440,9 +460,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -492,9 +512,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -541,9 +561,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -592,9 +612,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -641,9 +661,9 @@
               <span class="sr-only">Next</span>
             </a>
 
-          <div class="contact-button">
-            <img src="images/contact-button.png" alt="" class="contact-button">
-          </div>
+            <div class="contact-button">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            </div>
 
         </div>
 
@@ -738,7 +758,95 @@
               </div>
             </div>
 
+            <div class="contact-btn">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-img"></a>
+            </div>
+
         </section>
+
+        <section class="myForm d-flex align-items-center justify-content-center">
+
+          <div class="form">
+
+            <form class="border-0" action="index.html" method="post">
+              <h3 class="form-heading">Kontaktieren Sie uns</h3>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Vorname">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Nachname">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Strasse">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Nr.">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="PLZ">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Ort">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="" placeholder="Telefon">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" id="" placeholder="Email">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <select id='' class="form-control select">
+                    <option disabled selected class="form-control">Korrespondenz</option>
+                    <option class="form-control">Email</option>
+                    <option class="form-control">Brief</option>
+                    <option class="form-control">Telecom</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <select id='' class="form-control select">
+                    <option disabled selected>Services</option>
+                    <option>Gartenplanung</option>
+                    <option>Gartenneubau</option>
+                    <option>Gartenumänderung</option>
+                    <option>Gartenunterhalt</option>
+                    <option>Terrassenbau</option>
+                    <option>Teich- & Poolbau</option>
+                    <option>Gartenausgestaltung</option>
+                    <option>Spieplatzbau</option>
+                  </select>
+                </div>
+              </div>
+
+            <div class="form-row">
+              <div class="form-group col">
+                <textarea class="form-control select" id="" rows="3" placeholder="Nachricht"></textarea>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center">
+              <button type="submit" name="button" class="btn submit-btn">Senden</button>
+            </div>
+          </form>
+
+          </div>
+        </section>
+
 
     </main>
   </body>
