@@ -321,6 +321,10 @@ body{
   border: 1px transparent;
   z-index: 99;
 }
+.team-text{
+  font-size: 18px;
+  font-family: 'Open Sans';
+}
 .rounded-img{
   width: 200px;
   height: 200px;
@@ -351,7 +355,7 @@ body{
   background-color: rgba(237, 232, 218, 0.6);
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   width: 80%;
-  height: 90%;
+  border-radius: 15px;
 }
 .form-heading{
   padding: 2% 3%;
@@ -373,17 +377,53 @@ body{
   width: 95%;
   margin-left: 2%;
 }
+.senden{
+  padding-bottom: 5%;
+}
 .submit-btn{
-  /* border: 3px solid #FF4500; */
   text-align: center;
   background-color: rgba(255, 69, 0, 0.51);
   margin: 0 auto;
-  padding: 1% 20%;
+  padding: 1% 10%;
   font-size: 20px;
-  margin-top: 1%;
 }
 .submit-btn:hover{
   background-color: rgba(255, 69, 0);
+}
+.main-address{
+  height: 100vh;
+  background-image: url('images/home.png');
+  background-size: cover;
+}
+.address{
+  width: 350px;
+  height: 350px;
+  background-color: rgba(237, 232, 218, 0.6);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'config';
+  margin: 0 auto;
+  transform: translate(0px, 125px);
+}
+.social-links{
+  margin: 0 auto;
+  width: 180px;
+  height: 200px;
+  transform: translate(0px, 150px);
+}
+.heading-address{
+  padding-bottom: 5%;
+}
+.mail{
+  color: #212529;
+}
+.facebook{
+  margin-right: 35px;
+  width: 60px;
+}
+.instagram{
+  width: 70px;
 }
 
 /* Small Laptop and Tablets Breakpoint */
@@ -416,9 +456,6 @@ body{
   }
   .myForm{
     padding-top: 10%;
-  }
-  .form{
-    height: 95%;
   }
 }
 
@@ -473,7 +510,7 @@ body{
 .w-100{
   width: auto!important;
 }
-.first, .slider-team, .jobs{
+.first, .slider-team, .jobs, .myForm, .main-address{
   background-image: url('images/home-mobile.jpg');
   background-size: cover;
 }
@@ -499,7 +536,7 @@ body{
   width: 230px;
   height: 180px;
 }
-.card-para{
+.card-para,.team-text{
   margin-left: 8px;
   font-size: 12px;
 }
@@ -544,5 +581,30 @@ body{
 .slider-team{
   height: 100vh;
   padding: 30% 0%;
+}
+.form-heading{
+  font-size: 20px;
+}
+.form-control{
+  font-size: 15px;
+  padding: 0;
+  height: calc(1em + .75rem + 2px);
+}
+.submit-btn{
+  font-size: 15px;
+}
+.address{
+  width: 300px;
+  height: 250px;
+}
+.footer{
+  font-size: 1rem;
+}
+.facebook{
+  margin:0 30px;
+  width: 40px;
+}
+.instagram{
+  width: 50px;
 }
 }
