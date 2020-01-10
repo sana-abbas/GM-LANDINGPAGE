@@ -136,20 +136,22 @@ body{
   background-size: cover;
 }
 .second{
-  background-image: url('images/background-building.png');
+  background-image: url('images/home2.jpeg');
   height: 100vh;
+  background-position: center;
   background-size: cover;
 }
 .third{
-  background-image: url('images/background-events.png');
+  background-image: url('images/home3.jpeg');
   height: 100vh;
+  background-position: center;
   background-size: cover;
 }
- .flip-card {
+ .flip-card{
   perspective: 1000px;
   outline: none;
-  width: 550px;
-  height: 450px;
+  width: 400px;
+  height: 435px;
 }
 .flip-card-inner {
   background-color: rgba(237, 232, 218, 0.6);
@@ -208,9 +210,9 @@ body{
   font-family: 'config';
 }
 .card-para{
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Open Sans';
-  padding: 0 3%;
+  padding: 0 1%;
 }
 
 /* Event Section */
@@ -230,7 +232,7 @@ body{
  width: 325px;
  height: 325px;
 }
-.events-images, .team, .jobs{
+.events-images{
   background-image: url('images/home.png');
   height: 100vh;
   background-size: cover;
@@ -274,52 +276,125 @@ body{
 
 /* Services Section */
 
-.service-list{
-  list-style-type: none;
+.gartenplanung-main{
+  background-image: url('images/gartenplanung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenneubau-main{
+  background-image: url('images/gartennebau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenumanderung-main{
+  background-image: url('images/gartenmanderung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenunterhalt-main{
+  background-image: url('images/gartenunterhalt.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenausgestaltung-main{
+  background-image: url('images/gartenausgestaltung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.spielplatzbau-main{
+  background-image: url('images/spielpatzbau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.teich-main{
+  background-image: url('images/teich.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.terrassenbau-main{
+  background-image: url('images/terrassenbau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+ul.service-list{
+  list-style-position: inside ;
   padding: 0;
   padding-top: 20px;
 }
 .service-para{
-  padding: 25px 7%;
+  padding: 15px 7%;
 }
 .contact-button{
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
+  z-index: 20;
+  padding-bottom: 10%;
+}
+.contact-image{
   width: 110px;
   height: 80px;
   z-index: 20;
 }
-.contact-img{
-  width: 110px;
-  height: 80px;
-  z-index: 20;
-  margin-right: 75px;
-  margin-top: 145px;
-  float: right;
+.service-card{
+  width: 435px;
+  height: 435px;
 }
 
 /* Leitbild Section */
 
+.leitbild-main{
+  background-image: url('images/leitbild.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
 .flip-card-4{
   perspective: 1000px;
   outline: none;
   width: 700px;
   height: 500px;
 }
-.card-4{
-  background-color: transparent;
-  border: 1px transparent;
-  position: absolute;
-  z-index: 99;
+.leitbild{
+  transform: translate(0%, 27%);
 }
 
 /* Team Section */
 
+.team{
+  background-image: url('images/team-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
 .card-5{
   background-color: transparent;
   border: 1px transparent;
   z-index: 99;
+}
+.card-inner{
+  background-color: rgba(237, 232, 218, 0.6);
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 .team-text{
   font-size: 18px;
@@ -339,14 +414,28 @@ body{
 
 /* Jobs Section */
 
+.jobs{
+  background-image: url('images/jobs.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
 .main-jobs{
   transform: translate(0%, 27%);
+}
+.contact-img{
+  width: 110px;
+  height: 80px;
+  z-index: 20;
+  margin-right: 75px;
+  margin-top: 145px;
+  float: right;
 }
 
 /* Form Section */
 
 .myForm{
-  background-image: url('images/home.png');
+  background-image: url('images/kontakt.jpeg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -360,6 +449,7 @@ body{
 }
 .form-heading{
   padding: 2% 3%;
+  padding-bottom: 1%;
 }
 .form-control{
   background-color: transparent;
@@ -367,6 +457,7 @@ body{
   color: black;
   margin-left: 4%;
   width: 90%;
+  font-size: 16px;
   border-bottom: 3px solid #FF4500;
   transform: matrix(1, 0, 0, 1, 0, 0);
   outline: none;
@@ -374,12 +465,18 @@ body{
 .form-control::-webkit-input-placeholder{
    color: black;
 }
+.form-group{
+  margin-bottom: 0.75rem;
+}
+textarea.form-control{
+  height: auto;
+}
 .select{
   width: 95%;
   margin-left: 2%;
 }
 .senden{
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 }
 .submit-btn{
   text-align: center;
@@ -391,6 +488,9 @@ body{
 .submit-btn:hover{
   background-color: rgba(255, 69, 0);
 }
+
+/* Address Section */
+
 .main-address{
   height: 100vh;
   background-image: url('images/home.png');
@@ -427,12 +527,45 @@ body{
   width: 70px;
 }
 
-/* Small Laptop and Tablets Breakpoint */
+/* Impressum Section */
 
-@media only screen and (max-width : 1024px) {
+.main-impressum{
+  background-image: url('images/impressum.jpeg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.impressum{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,20%);
+  background-color: rgba(237, 232, 218, 0.6);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'config';
+  width: 700px;
+  height: 630px;
+}
+.footer-links{
+  padding: 2% 0;
+}
+.footer-list{
+  list-style-type: none;
+  font-family: 'config-light';
+  font-size: 18px;
+  padding: 0;
+}
+.description{
+  font-family: 'config-light';
+}
+
+/*------------------------ Small Laptop and Tablets Breakpoint -----------------------------*/
+
+@media only screen and (max-width : 1024px){
   .flip-card{
-    height: 435px;
-    width: 435px;
+    height: 375px;
+    width: 375px;
   }
   .menu-icon-2{
     width: 300px;
@@ -451,16 +584,32 @@ body{
     height: 100vh;
     padding: 15% 0%;
   }
-  .contact-button{
-    right: 30px;
-    bottom: 30px;
+  .contact-image{
+    width: 90px;
+    height: 70px;
+  }
+  .contact-img {
+    width: 90px;
+    height: 70px;
+    z-index: 20;
+    margin-right: 70px;
+    margin-top: 135px;
+    float: right;
   }
   .myForm{
     padding-top: 14%;
   }
+  .impressum{
+    width: 550px;
+    height: 500px;
+    transform: translate(-50%,25%)
+  }
+  .description{
+    font-size: 1.2rem
+  }
 }
 
-/* Mobile Breakpoint */
+/*------------------------------- Mobile Breakpoint -------------------------------------*/
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
 .navbar{
@@ -498,22 +647,22 @@ body{
 .dropdown-item{
   font-size: 18px;
 }
-.card,.card-4{
+.flip-card{
   width: 275px;
   height: 380px;
-  top: 130px;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, 0px);
+  transform: translate(-50%, 30%);
+  padding: 0;
+}
+.gartenplanung-main, .gartenneubau-main, .terrassenbau-main, .teich-main, .spielplatzbau-main, .gartenunterhalt-main, .gartenumanderung-main, .gartenausgestaltung-main{
+  padding-left: 0;
 }
 .align-self-center{
   align-self: auto!important;
 }
 .w-100{
   width: auto!important;
-}
-.first, .slider-team, .jobs, .myForm, .main-address{
-  background-image: url('images/home-mobile.jpg');
-  background-size: cover;
 }
 .carousel-control-next , .carousel-control-prev{
   align-items: flex-end;
@@ -561,10 +710,13 @@ body{
   background-image: url('images/home-mobile.jpg');
 }
 .contact-button{
+  position: relative;
+  transform: translate(-40%,0);
+  padding-bottom: 15%;
+}
+.contact-image{
   width: 70px;
   height: 60px;
-  right: auto!important;
-  bottom: 50px!important;
 }
 .contact-btn{
   position: absolute;
@@ -589,9 +741,8 @@ body{
   height: 100vh;
   padding: 30% 0%;
 }
-.myForm{
+ .myForm{
   padding-top: 21%;
-  }
 }
 .form-heading{
   font-size: 20px;
@@ -626,5 +777,18 @@ textarea.form-control{
 }
 .instagram{
   width: 50px;
+}
+.impressum{
+  width: 300px;
+  height: 450px;
+}
+.heading-impressum{
+  font-size: 1.5rem;
+}
+.footer-heading{
+  font-size: 20px;
+}
+.description{
+  font-size: 15px;
 }
 }

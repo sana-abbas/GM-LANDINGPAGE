@@ -8,18 +8,18 @@
 <title>Gartenmanufactur AG | Coming Soon</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="slick/slick/slick.min.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <!-- <script type="text/javascript" src="flip/src/justFlipIt.min.js"></script> -->
 <link rel="stylesheet" href="styles.css">
 <script>
   $(document).ready(function(){
-    $('.dropdown-item, #home, #kontakt').click(function(){
+    $('.dropdown-item, #home, #kontakt, #impressum').click(function(){
        $('.navbar-collapse').collapse('hide');
         $('.menu-icon').toggle();
         $('.heading').toggle();
@@ -52,7 +52,7 @@
 
     $(".gartenumänderung").click(function() {
       $('html, body').animate({
-        scrollTop: $(".gartenumänderung-main").offset().top
+        scrollTop: $(".gartenumanderung-main").offset().top
       }, 1500);
     });
 
@@ -116,6 +116,11 @@
       }, 1500);
     });
 
+    $("#impressum").click(function() {
+      $('html, body').animate({
+        scrollTop: $(".main-impressum").offset().top
+      }, 1500);
+    });
 
 
     $('.slider-team').slick({
@@ -145,6 +150,53 @@
   }
 ]
     });
+
+    $('#submit').click(function(){
+
+      var formData = {
+        'name' : $('#name').val(),
+        'lastName' : $('#lastName').val(),
+        'street' : $('#street').val(),
+        'number' : $('#number').val(),
+        'zip' : $('#zip').val(),
+        'location' : $('#location').val(),
+        'fone' : $('#fone').val(),
+        'email' : $('#email').val(),
+        'correspondence' : $("#correspondence").val(),
+        'service' : $("#services").val(),
+        'message' : $("#message").val(),
+        }
+
+        if (formData['name'] == "" || formData['lastName'] == "" || formData['street'] == "" || formData['number'] == "" || formData['zip'] == "" || formData['location'] == "" || formData['fone'] == "") {
+
+        $('#error').html('Please fill all the fields!').css({'color':'red','display':'block','margin-left':'3%', 'font-size' : '20px'});
+        return false;
+
+        }else{
+          $.ajax({
+
+            type: "POST",
+
+            url: "ajax.php",
+
+            data: {
+                formData,
+               },
+
+          success: function(response) {
+              console.log(response);
+             $('.myForm').hide();
+             $('.form-heading').hide();
+             $('#error').hide();
+             $('#sent').html("Thank You for Registering!" + "<br>" + " We will get back to you soon.").css({'color':'#49c5b6','display':'block','margin-left':'5%', 'margin-right':'10%' , 'margin-top':'40%','font-size':'2em','font-weight': '700','text-align': 'center'});
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR + " :: " + textStatus + " :: " + errorThrown);
+        }
+
+      });
+    }
+  });
 
     //   $('.flip-card').click(function() {
     //   $(this).toggleClass('flipped');
@@ -177,7 +229,7 @@
                 <a class="nav-link" href="events.html">Aktuelles</a>
               </li> -->
               <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+               <a class="nav-link dropdown-toggle services" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
                  <a class="dropdown-item gartenplanung" href="javascript:void(0)">Gartenplanung & Beratung</a>
                  <a class="dropdown-item gartenneubau" href="javascript:void(0)">Gartenneubau</a>
@@ -190,7 +242,7 @@
                </div>
              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+                <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
                 <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" id="leitbild" href="javascript:void(0)">Leitbild</a>
                   <a class="dropdown-item" id="team" href="javascript:void(0)">Team</a>
@@ -199,10 +251,10 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="kontakt" href="#">Kontakt</a>
+                <a class="nav-link" id="kontakt" href="javascript:void(0)">Kontakt</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Impressum</a>
+                <a class="nav-link" id="impressum" href="javascript:void(0)">Impressum</a>
               </li>
             </ul>
           </div>
@@ -258,9 +310,10 @@
 
         <!-- Gartenplanung -->
 
-          <div id="carouselExampleControls" class="carousel gartenplanung-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="gartenplanung-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-md-6 col-lg-4 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenplanung und Beratung</h3>
@@ -269,49 +322,30 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Kundenspezifische Beratung & Ideengeber</h6></li>
-                    <li class="card-title"><h6>-Geländeaufnahmen</h6></li>
-                    <li class="card-title"><h6>-Vorprojektierung</h6></li>
-                    <li class="card-title"><h6>-Gartenplanung</h6></li>
-                    <li class="card-title"><h6>-Detailplanung</h6></li>
-                    <li class="card-title"><h6>-Baueingaben</h6></li>
-                    <li class="card-title"><h6>-Ausmass & Devisierungen</h6></li>
+                    <h6><li class="card-title">Kundenspezifische Beratung & Ideengeber</li></h6>
+                    <h6><li class="card-title">Geländeaufnahmen</li></h6>
+                    <h6><li class="card-title">Vorprojektierung</li></h6>
+                    <h6><li class="card-title">Gartenplanung</li></h6>
+                    <h6><li class="card-title">Detailplanung</li></h6>
+                    <h6><li class="card-title">Baueingaben</li></h6>
+                    <h6><li class="card-title">Ausmass & Devisierungen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-          <div class="contact-button">
-          <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
-          </div>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
+            </div>
 
         </div>
 
         <!-- Gartenneubau -->
 
-          <div id="carouselExampleControls" class="carousel gartenneubau-main row d-flex justify-content-center" data-ride="carousel">
-
-            <div class="flip-card card col-lg-4 align-self-center">
+          <div class="gartenneubau-main row d-flex">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenneubau</h3>
@@ -320,52 +354,32 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Abbrucharbeiten</h6></li>
-                    <li class="card-title"><h6>-Erdarbeiten</h6></li>
-                    <li class="card-title"><h6>-Kanalisation & Entwässerungen</h6></li>
-                    <li class="card-title"><h6>-Sämtliche Belagsarbeiten</h6></li>
-                    <li class="card-title"><h6>-Sichtschutz</h6></li>
-                    <li class="card-title"><h6>-Mauern & Treppen</h6></li>
-                    <li class="card-title"><h6>-Begrünungen</h6></li>
-                    <li class="card-title"><h6>-Bepflanzungen</h6></li>
-                    <li class="card-title"><h6>-Diverse Austattungen</h6></li>
-                    <li class="card-title"><h6>-Erstellungspflege</h6></li>
+                    <h6><li class="card-title">Abbrucharbeiten</li></h6>
+                    <h6><li class="card-title">Erdarbeiten</li></h6>
+                    <h6><li class="card-title">Kanalisation & Entwässerungen</li></h6>
+                    <h6><li class="card-title">Sämtliche Belagsarbeiten</li></h6>
+                    <h6><li class="card-title">Mauern & Treppen</li></h6>
+                    <h6><li class="card-title">Begrünungen</li></h6>
+                    <h6><li class="card-title">Bepflanzungen</li></h6>
+                    <h6><li class="card-title">Erstellungspflege</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
-            </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Gartenumänderung -->
 
-          <div id="carouselExampleControls" class="carousel gartenumänderung-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="gartenumanderung-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenumänderung</h3>
@@ -374,50 +388,32 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Abbrucharbeiten</h6></li>
-                    <li class="card-title"><h6>-Rodungen</h6></li>
-                    <li class="card-title"><h6>-Terrainveränderungen</h6></li>
-                    <li class="card-title"><h6>-Belagssanierungen</h6></li>
-                    <li class="card-title"><h6>-Reinigungen von diversen Bauteile</h6></li>
-                    <li class="card-title"><h6>-Komplett- & Teilsanierungen</h6></li>
-                    <li class="card-title"><h6>-Bepflanzungserneuerungen</h6></li>
-                    <li class="card-title"><h6>-Grünflächenumnutzung</h6></li>
+                    <h6><li class="card-title">Abbrucharbeiten</li></h6>
+                    <h6><li class="card-title">Rodungen</li></h6>
+                    <h6><li class="card-title">Terrainveränderungen</li></h6>
+                    <h6><li class="card-title">Belagssanierungen</li></h6>
+                    <h6><li class="card-title">Reinigungen von diversen Bauteile</li></h6>
+                    <h6><li class="card-title">Komplett- & Teilsanierungen</li></h6>
+                    <h6><li class="card-title">Bepflanzungserneuerungen</li></h6>
+                    <h6><li class="card-title">Grünflächenumnutzung</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Gartenunterhalt -->
 
-          <div id="carouselExampleControls" class="carousel gartenunterhalt-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="gartenunterhalt-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenunterhalt</h3>
@@ -426,51 +422,33 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Sträucher & Baumschnit</h6></li>
-                    <li class="card-title"><h6>-Staudenpflege</h6></li>
-                    <li class="card-title"><h6>-Rasenpflege</h6></li>
-                    <li class="card-title"><h6>-Rasensanierungen</h6></li>
-                    <li class="card-title"><h6>-Blumenwiesebetreuung</h6></li>
-                    <li class="card-title"><h6>-Pflanzenschutz (chemisch& biologisch)</h6></li>
-                    <li class="card-title"><h6>-Winterdienst</h6></li>
-                    <li class="card-title"><h6>-Weihnachtsdekorationen</h6></li>
-                    <li class="card-title"><h6>-Feriendienst</h6></li>
+                    <h6><li class="card-title">Sträucher & Baumschnit</li></h6>
+                    <h6><li class="card-title">Staudenpflege</li></h6>
+                    <h6><li class="card-title">Rasenpflege</li></h6>
+                    <h6><li class="card-title">Rasensanierungen</li></h6>
+                    <h6><li class="card-title">Blumenwiesebetreuung</li></h6>
+                    <h6><li class="card-title">Pflanzenschutz (chemisch& biologisch)</li></h6>
+                    <h6><li class="card-title">Winterdienst</li></h6>
+                    <h6><li class="card-title">Weihnachtsdekorationen</li></h6>
+                    <h6><li class="card-title">Feriendienst</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Terrassenbau -->
 
-          <div id="carouselExampleControls" class="carousel terrassenbau-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="terrassenbau-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Terrassenbau</h3>
@@ -479,50 +457,32 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Terassenneubau</h6></li>
-                    <li class="card-title"><h6>-Terassensanierung</h6></li>
-                    <li class="card-title"><h6>-Entwässerungen</h6></li>
-                    <li class="card-title"><h6>-Pflanztröge</h6></li>
-                    <li class="card-title"><h6>-Bepflanzungen</h6></li>
-                    <li class="card-title"><h6>-Bewässerungen</h6></li>
-                    <li class="card-title"><h6>-Beleuchtungen</h6></li>
-                    <li class="card-title"><h6>-Sonnenschutz</h6></li>
+                    <h6><li class="card-title">Terassenneubau</li></h6>
+                    <h6><li class="card-title">Terassensanierung</li></h6>
+                    <h6><li class="card-title">Entwässerungen</li></h6>
+                    <h6><li class="card-title">Pflanztröge</li></h6>
+                    <h6><li class="card-title">Bepflanzungen</li></h6>
+                    <h6><li class="card-title">Bewässerungen</li></h6>
+                    <h6><li class="card-title">Beleuchtungen</li></h6>
+                    <h6><li class="card-title">Sonnenschutz</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Teich- und Poolbau -->
 
-          <div id="carouselExampleControls" class="carousel teich-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="teich-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Teich- und Poolbau</h3>
@@ -531,47 +491,29 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Planung</h6></li>
-                    <li class="card-title"><h6>-Neuerstellung von Teich & Pools</h6></li>
-                    <li class="card-title"><h6>-Teich & Pool Sanierungen</h6></li>
-                    <li class="card-title"><h6>-Reinigung</h6></li>
-                    <li class="card-title"><h6>-Wasserproben</h6></li>
+                    <h6><li class="card-title">Planung</li></h6>
+                    <h6><li class="card-title">Neuerstellung von Teich & Pools</li></h6>
+                    <h6><li class="card-title">Teich & Pool Sanierungen</li></h6>
+                    <h6><li class="card-title">Reinigung</li></h6>
+                    <h6><li class="card-title">Wasserproben</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
-            </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Gartenausgestaltung -->
 
-          <div id="carouselExampleControls" class="carousel gartenausgestaltung-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="gartenausgestaltung-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenausgestaltung</h3>
@@ -580,49 +522,31 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Gartenbeleuchtung</h6></li>
-                    <li class="card-title"><h6>-Ausstattungen</h6></li>
-                    <li class="card-title"><h6>-Sonnenschutz</h6></li>
-                    <li class="card-title"><h6>-Bewässerungen</h6></li>
-                    <li class="card-title"><h6>-Wasserspiele & Brunnen</h6></li>
-                    <li class="card-title"><h6>-Möblierungen</h6></li>
-                    <li class="card-title"><h6>-Skulpturen</h6></li>
+                    <h6><li class="card-title">Gartenbeleuchtung</li></h6>
+                    <h6><li class="card-title">Ausstattungen</li></h6>
+                    <h6><li class="card-title">Sonnenschutz</li></h6>
+                    <h6><li class="card-title">Bewässerungen</li></h6>
+                    <h6><li class="card-title">Wasserspiele & Brunnen</li></h6>
+                    <h6><li class="card-title">Möblierungen</li></h6>
+                    <h6><li class="card-title">Skulpturen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
 
         <!-- Spielplatzbau -->
 
-          <div id="carouselExampleControls" class="carousel spielplatzbau-main row d-flex justify-content-center" data-ride="carousel">
+          <div class="spielplatzbau-main row d-flex">
 
-            <div class="flip-card card col-lg-4 align-self-center">
+            <div class="col-lg-4 col-md-6 justify-content-start align-self-center">
+            <div class="flip-card">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Spielplatzbau</h3>
@@ -631,38 +555,20 @@
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <li class="card-title"><h6>-Planung</h6></li>
-                    <li class="card-title"><h6>-Spielplatz Neubau</h6></li>
-                    <li class="card-title"><h6>-Spielplatz Sanierungen</h6></li>
-                    <li class="card-title"><h6>-Spielplatz Pflege</h6></li>
-                    <li class="card-title"><h6>-Spielplatz Inspektionen</h6></li>
+                    <h6><li class="card-title">Planung</li></h6>
+                    <h6><li class="card-title">Spielplatz Neubau</li></h6>
+                    <h6><li class="card-title">Spielplatz Sanierungen</li></h6>
+                    <h6><li class="card-title">Spielplatz Pflege</li></h6>
+                    <h6><li class="card-title">Spielplatz Inspektionen</li></h6>
+                    <h6><li class="card-title">Diverse Austattungen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
             </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
-            <div class="contact-button">
-            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-button"></a>
+            <div class="contact-button col-md-6 col-sm-8 d-flex align-items-end justify-content-end">
+            <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
         </div>
@@ -673,9 +579,9 @@
 
         <section class="leitbild-main">
 
-          <div id="carouselExampleControls" class="carousel slide row d-flex justify-content-center" data-ride="carousel">
+          <div class="leitbild row d-flex justify-content-center">
 
-            <div class="flip-card-4 justify-content-center d-flex align-items-center card-4 align-self-center">
+            <div class="flip-card-4 justify-content-center d-flex align-items-center align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Leitbild</h3>
@@ -683,26 +589,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="carousel-inner col">
-              <div class="carousel-item active">
-                <div class="d-block w-100 first"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 second"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="third d-block w-100"></div>
-              </div>
-            </div>
-            <a class="carousel-control-prev d-flex" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next d-flex" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
 
         </section>
 
@@ -714,7 +600,7 @@
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
               <div class="flip-card-4 card-5 align-self-center">
-                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <img src="images/jon.png" alt="" class="rounded-img">
                     <h2 class="card-title ">Alexej Wiedmer</h2>
@@ -727,7 +613,7 @@
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
               <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
-                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <img src="images/jon.png" alt="" class="rounded-img">
                     <h2 class="card-title">Yannik Cheret</h2>
@@ -740,7 +626,7 @@
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
               <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
-                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <img src="images/jon.png" alt="" class="rounded-img">
                     <h2 class="card-title">Mathias Harder</h2>
@@ -753,7 +639,7 @@
 
             <div class="container-fluid row d-flex align-items-center justify-content-center">
               <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
-                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <img src="images/jon.png" alt="" class="rounded-img">
                     <h2 class="card-title">Florian Böhler</h2>
@@ -793,48 +679,49 @@
         <section class="myForm d-flex align-items-center justify-content-center">
 
           <div class="form">
-
-            <form class="border-0" action="index.html" method="post">
-              <h3 class="form-heading">Kontaktieren Sie uns</h3>
+            <h3 class="form-heading">Kontaktieren Sie uns</h3>
+            <span id="error"></span>
+            <span id="sent"></span>
+            <form class="border-0" action="javascript:void(0)" method="POST">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="" placeholder="Vorname">
+                  <input type="text" class="form-control" id="name" placeholder="Vorname">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="" placeholder="Nachname">
+                  <input type="text" class="form-control" id="lastName" placeholder="Nachname">
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6 col-sm-9">
-                  <input type="text" class="form-control" id="" placeholder="Strasse">
+                  <input type="text" class="form-control" id="street" placeholder="Strasse">
                 </div>
                 <div class="form-group col-md-6 col-sm-3">
-                  <input type="text" class="form-control" id="" placeholder="Nr.">
+                  <input type="text" class="form-control" id="number" placeholder="Nr.">
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6 col-sm-3">
-                  <input type="text" class="form-control" id="" placeholder="PLZ">
+                  <input type="text" class="form-control" id="zip" placeholder="PLZ">
                 </div>
                 <div class="form-group col-md-6 col-sm-9">
-                  <input type="text" class="form-control" id="" placeholder="Ort">
+                  <input type="text" class="form-control" id="location" placeholder="Ort">
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="" placeholder="Telefon">
+                  <input type="text" class="form-control" id="fone" placeholder="Telefon">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="" placeholder="Email">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col">
-                  <select id='' class="form-control select">
+                  <select id='correspondence' class="form-control select">
                     <option disabled selected class="form-control">Korrespondenz</option>
                     <option class="form-control">Email</option>
                     <option class="form-control">Brief</option>
@@ -845,7 +732,7 @@
 
               <div class="form-row">
                 <div class="form-group col">
-                  <select id='' class="form-control select">
+                  <select id='services' class="form-control select">
                     <option disabled selected>Services</option>
                     <option>Gartenplanung</option>
                     <option>Gartenneubau</option>
@@ -861,12 +748,12 @@
 
             <div class="form-row">
               <div class="form-group col">
-                <textarea class="form-control select" id="" rows="3" placeholder="Nachricht"></textarea>
+                <textarea class="form-control select" id="message" rows="3" placeholder="Nachricht"></textarea>
               </div>
             </div>
 
             <div class="senden d-flex align-items-center justify-content-center">
-              <button type="submit" name="button" class="btn submit-btn">Senden</button>
+              <button type="submit" name="button" id="submit" class="btn submit-btn">Senden</button>
             </div>
           </form>
 
@@ -893,6 +780,36 @@
               </div>
             </div>
 
+        </section>
+
+        <section class="main-impressum">
+
+          <div class="impressum">
+            <h2 class="heading-impressum">Impressum</h2>
+            <div class="footer-links">
+              <ul class="footer-list">
+                <li><h3 class="description">Gartenmanufactur AG</h3></li>
+                <li><h3 class="description">Alexej Wiedmer</h3></li>
+                <li><h3 class="description">Bahnhofstrasse 1</h3></li>
+                <li><h3 class="description">8217 Wilchingen</h3></li>
+                <li><a href="tel:0794554584" class="mail"><h3 class="description">Tel. 079 455 45 84</h3></a></li>
+                <li><a href="mailto:a.weidmer@gm.ch" class="mail"><h3 class="description">a.wiedmer@gm.ch</h3></a></li>
+              </ul>
+              <h3 class="description">MWST-/UID-Nummer: CHE-293.604.882</h3>
+            </div>
+
+            <div class="footer-links">
+              <h3 class="footer-heading">Design und Web-Development</h3>
+              <h4 class="description">Nadia Baldelli, Sana Abbas, Marion Schleifer</h4>
+              <a href="tel:0764369383" class="mail"><h4 class="description">076 436 93 83</h4></a>
+            </div>
+
+            <div class="footer-links">
+              <h3 class="footer-heading">Avatar-Icons</h3>
+              <h4 class="description">https://iconscout.com/contributors/dmitriy-bondarchuk</h4>
+            </div>
+
+          </div>
 
         </section>
 
