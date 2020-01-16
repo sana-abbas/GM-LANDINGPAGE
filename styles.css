@@ -154,6 +154,12 @@ body{
   width: 425px;
   height: 440px;
 }
+.flipCard{
+  perspective: 1000px;
+  outline: none;
+  width: 500px;
+  height: 450px;
+}
 .flip-card-inner {
   background-color: rgba(237, 232, 218, 0.85);;
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
@@ -166,6 +172,9 @@ body{
   transform-style: preserve-3d;
 }
 .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flipCard:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 .flip-card-2:hover .flip-card-inner {
@@ -214,6 +223,13 @@ body{
 .card-para{
   font-size: 18px;
   font-family: 'Open Sans';
+}
+.mobile-para{
+  font-size: 18px;
+  font-family: 'Open Sans';
+}
+.main-para{
+  padding: 0 2%;
 }
 
 /* Event Section */
@@ -502,7 +518,7 @@ textarea.form-control{
   background-position: center;
 }
 .address{
-  width: 350px;
+  width: 370px;
   height: 350px;
   background-color: rgba(204, 204, 204, 0.85);
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
@@ -576,10 +592,17 @@ textarea.form-control{
     height: 375px;
     width: 340px;
   }
+  .flipCard{
+    height: 420px;
+    width: 340px;
+  }
   .menu-icon-2{
     width: 300px;
   }
   .card-para{
+    font-size: 15px;
+  }
+  .mobile-para{
     font-size: 15px;
   }
   .slider{
@@ -659,7 +682,7 @@ textarea.form-control{
 .dropdown-item{
   font-size: 18px;
 }
-.flip-card{
+.flip-card,.flipCard{
   width: 275px;
   height: 380px;
   position: absolute;

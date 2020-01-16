@@ -21,19 +21,28 @@ if (isset($_POST['formData'])) {
 		$mail->isSMTP(true);
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'gartenmanufactur@gmail.com';
+    $mail->Username   = 'gartenmanufactur.ag@gmail.com';
     $mail->Password   = 'msn975$#';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
-		$mail->setFrom('gartenmanufactur@gmail.com');
-		$mail->addAddress("sana.abbhaid@gmail.com");
-		//$mail->addAddress("marion.schleifer@gmail.com");
-	  //$mail->addAddress("nadia.baldelli@gmx.ch");
-		$mail->isHTML(true);
-    $mail->Subject = "Kontaktieren Sie";
-    $mail->Body    = "Name: $name <br> <br>
+	$mail->setFrom('gartenmanufactur.ag@gmail.com');
+	$mail->addAddress("sana.abbhaid@gmail.com");
+	//$mail->addAddress("marion.schleifer@gmail.com");
+  //	$mail->addAddress("baldellinadia@gmail.com");
+  	//$mail->addAddress("nadia.baldelli@gmail.com");
+	$mail->isHTML(true);
+    $mail->Subject = "Kontaktieren Sie Uns";
+    $mail->Body    = "Vorname: $name <br> <br>
+											Nachname: $lastName <br/> <br/>
+											Strasse: $street <br /> <br />
+											Nr.: $number <br /> <br />
+											PLZ: $zip <br /> <br />
+											Ort: $location <br /> <br />
+											Telefon: $fone <br/> <br />
     				  				Email: $email <br> <br>
-    				  				Service Required: $services";
+											Korrespondence: $correspondence <br /> <br />
+    				  				Service Required: $services <br /> <br />
+											Nachricht: $message";
     if($mail->send()){
 		echo  "Email Sent";
 		}else{
