@@ -203,17 +203,11 @@
         'message' : $("#message").val(),
         }
 
-        if (formData['name'] == "" || formData['lastName'] == "" || formData['street'] == "" || formData['number'] == "" || formData['zip'] == "" || formData['location'] == "" || formData['fone'] == "") {
-        //
-        // $('#error').html('Please fill all the fields!').css({'color':'red','display':'block','margin-left':'3%', 'font-size' : '20px'});
-        // return false;
-
-        }else{
           $.ajax({
 
             type: "POST",
 
-            url: "ajax.php",
+            url: "https://gartenmanufactur.ch/ajax.php",
 
             data: {
                 formData,
@@ -231,7 +225,6 @@
         }
 
       });
-    }
   });
 
     //   $('.flip-card').click(function() {
