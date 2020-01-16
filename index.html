@@ -15,6 +15,10 @@
 <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
 <!-- <script type="text/javascript" src="flip/src/justFlipIt.min.js"></script> -->
 <link rel="stylesheet" href="styles.css">
 <script>
@@ -151,8 +155,40 @@
 ]
     });
 
+    $('#formValidate').validate({
+      rules:{
+        name:{
+          required: true,
+          minlength: 3,
+        },
+        lastName:{
+          required: true
+        },
+        street:{
+          required: true
+        },
+        number:{
+          required: true,
+          digits: true
+        },
+        zip:{
+          required: true,
+          digits: true
+        },
+        location:{
+          required: true,
+        },
+        fone:{
+          required: true,
+          digits: true
+        },
+        email:{
+          required: true,
+          email: true
+        },
+      }
+    });
     $('#submit').click(function(){
-
       var formData = {
         'name' : $('#name').val(),
         'lastName' : $('#lastName').val(),
@@ -168,9 +204,9 @@
         }
 
         if (formData['name'] == "" || formData['lastName'] == "" || formData['street'] == "" || formData['number'] == "" || formData['zip'] == "" || formData['location'] == "" || formData['fone'] == "") {
-
-        $('#error').html('Please fill all the fields!').css({'color':'red','display':'block','margin-left':'3%', 'font-size' : '20px'});
-        return false;
+        //
+        // $('#error').html('Please fill all the fields!').css({'color':'red','display':'block','margin-left':'3%', 'font-size' : '20px'});
+        // return false;
 
         }else{
           $.ajax({
@@ -274,10 +310,10 @@
                   <img src="images/menu-icon.png" alt="" class="menu-icon-2">
                 </div>
                 <div class="flip-card-back">
-                  <p class="card-title card-para">Lieber Kunde, zukünftiger Kunde oder Neugieriger</p>
-                  <p class="card-title card-para">Wir freuen uns Sie auf der Homepage der Gartenmanufactur AG begrüssen zu dürfen.Wir sind ein junges und dynamisches Unternehmen welches sämtliche Gartenbaudienstleistungen für Sie ausführt.</p>
-                  <p class="card-title card-para">Unsere Gärten sind explizit auf Sie persönlich zugeschnitten und werden mit grösster Sorgfalt und Fachwissen für Sie gebaut. Ebenfalls kümmern wir uns liebevoll um Ihren Garten.</p>
-                  <p class="card-title card-para">Wir wünschen Ihnen nun viel Freude beim durchstöbern unserer Website und freuen uns von Ihnen zu hören, damit wir Sie persönlich von unseren Gärten begeistern können.</p>
+                  <p class="card-title mobile-para">Lieber Kunde, zukünftiger Kunde oder Neugieriger</p>
+                  <p class="card-para main-para">Wir freuen uns Sie auf der Homepage der Gartenmanufactur AG begrüssen zu dürfen.Wir sind ein junges und dynamisches Unternehmen welches sämtliche Gartenbaudienstleistungen für Sie ausführt.</p>
+                  <p class="card-para main-para">Unsere Gärten sind explizit auf Sie persönlich zugeschnitten und werden mit grösster Sorgfalt und Fachwissen für Sie gebaut. Ebenfalls kümmern wir uns liebevoll um Ihren Garten.</p>
+                  <p class="card-para main-para">Wir wünschen Ihnen nun viel Freude beim durchstöbern unserer Website und freuen uns von Ihnen zu hören, damit wir Sie persönlich von unseren Gärten begeistern können.</p>
                 </div>
               </div>
             </div>
@@ -317,25 +353,25 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenplanung und Beratung</h3>
-                  <p class="card-title card-para service-para">Wir bringen Ihre Ideen und Wünsche aufs Papier. Vom Ideenkonzept bis zur Detailplanung begleiten und beraten wir Sie rund um Ihren Garten. Mit einem vollständigen und übersichtlichen Leistungsbeschrieb können Sie die Kosten abschätzen und kalkulieren. Eine vollständige und gute Gartenplanung legt den Grundstein für eine reibungslose Auftragsabwicklung.</p>
+                  <p class="card-para service-para">Wir bringen Ihre Ideen und Wünsche aufs Papier. Vom Ideenkonzept bis zur Detailplanung begleiten und beraten wir Sie rund um Ihren Garten. Mit einem vollständigen und übersichtlichen Leistungsbeschrieb können Sie die Kosten abschätzen und kalkulieren. Eine vollständige und gute Gartenplanung legt den Grundstein für eine reibungslose Auftragsabwicklung.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Kundenspezifische Beratung & Ideengeber</li></h6>
-                    <h6><li class="card-title">Geländeaufnahmen</li></h6>
-                    <h6><li class="card-title">Vorprojektierung</li></h6>
-                    <h6><li class="card-title">Gartenplanung</li></h6>
-                    <h6><li class="card-title">Detailplanung</li></h6>
-                    <h6><li class="card-title">Baueingaben</li></h6>
-                    <h6><li class="card-title">Ausmass & Devisierungen</li></h6>
+                    <h6><li class="card-para">Kundenspezifische Beratung & Ideengeber</li></h6>
+                    <h6><li class="card-para">Geländeaufnahmen</li></h6>
+                    <h6><li class="card-para">Vorprojektierung</li></h6>
+                    <h6><li class="card-para">Gartenplanung</li></h6>
+                    <h6><li class="card-para">Detailplanung</li></h6>
+                    <h6><li class="card-para">Baueingaben</li></h6>
+                    <h6><li class="card-para">Ausmass & Devisierungen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 col-lg-8 d-flex align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -349,26 +385,26 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenneubau</h3>
-                  <p class="card-title card-para service-para">Wir bauen und gestalten Ihren Garten nach Ihren Wünschen und Bedürfnissen. Wir legen Wert auf einen praktischen und langlebigen Garten der durch seine Schönheit auffällt.</p>
+                  <p class="card-para service-para">Wir bauen und gestalten Ihren Garten nach Ihren Wünschen und Bedürfnissen. Wir legen Wert auf einen praktischen und langlebigen Garten der durch seine Schönheit auffällt.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Abbrucharbeiten</li></h6>
-                    <h6><li class="card-title">Erdarbeiten</li></h6>
-                    <h6><li class="card-title">Kanalisation & Entwässerungen</li></h6>
-                    <h6><li class="card-title">Sämtliche Belagsarbeiten</li></h6>
-                    <h6><li class="card-title">Mauern & Treppen</li></h6>
-                    <h6><li class="card-title">Begrünungen</li></h6>
-                    <h6><li class="card-title">Bepflanzungen</li></h6>
-                    <h6><li class="card-title">Erstellungspflege</li></h6>
+                    <h6><li class="card-para">Abbrucharbeiten</li></h6>
+                    <h6><li class="card-para">Erdarbeiten</li></h6>
+                    <h6><li class="card-para">Kanalisation & Entwässerungen</li></h6>
+                    <h6><li class="card-para">Sämtliche Belagsarbeiten</li></h6>
+                    <h6><li class="card-para">Mauern & Treppen</li></h6>
+                    <h6><li class="card-para">Begrünungen</li></h6>
+                    <h6><li class="card-para">Bepflanzungen</li></h6>
+                    <h6><li class="card-para">Erstellungspflege</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 col-lg-8 d-flex align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -383,26 +419,26 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenumänderung</h3>
-                  <p class="card-title card-para service-para">Aus Alt wird Neu. Wir ändern Ihren bestehenden Garten nach Ihren Wünschen und Bedürfnissen. Wir lassen neue Ideen und Trends einfliessen, ohne den Charakter des bestehenden Gartens zu vergessen.</p>
+                  <p class="card-para service-para">Aus Alt wird Neu. Wir ändern Ihren bestehenden Garten nach Ihren Wünschen und Bedürfnissen. Wir lassen neue Ideen und Trends einfliessen, ohne den Charakter des bestehenden Gartens zu vergessen.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Abbrucharbeiten</li></h6>
-                    <h6><li class="card-title">Rodungen</li></h6>
-                    <h6><li class="card-title">Terrainveränderungen</li></h6>
-                    <h6><li class="card-title">Belagssanierungen</li></h6>
-                    <h6><li class="card-title">Reinigungen von diversen Bauteile</li></h6>
-                    <h6><li class="card-title">Komplett- & Teilsanierungen</li></h6>
-                    <h6><li class="card-title">Bepflanzungserneuerungen</li></h6>
-                    <h6><li class="card-title">Grünflächenumnutzung</li></h6>
+                    <h6><li class="card-para">Abbrucharbeiten</li></h6>
+                    <h6><li class="card-para">Rodungen</li></h6>
+                    <h6><li class="card-para">Terrainveränderungen</li></h6>
+                    <h6><li class="card-para">Belagssanierungen</li></h6>
+                    <h6><li class="card-para">Reinigungen von diversen Bauteile</li></h6>
+                    <h6><li class="card-para">Komplett- & Teilsanierungen</li></h6>
+                    <h6><li class="card-para">Bepflanzungserneuerungen</li></h6>
+                    <h6><li class="card-para">Grünflächenumnutzung</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 col-lg-8 d-flex align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -417,27 +453,27 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenunterhalt</h3>
-                  <p class="card-title card-para service-para">Damit der Garten seinen Reiz und Schönheit behält braucht es Pflege und Fachwissen. Wir kümmern uns mit Liebe zum Detail um Ihren Garten. Nach Wunsch können Jahresabos nach Ihren Bedürfnissen abgeschlossen werden, damit Sie zu jeder Jahreszeit Ihren Garten geniessen können.</p>
+                  <p class="card-para service-para">Damit der Garten seinen Reiz und Schönheit behält braucht es Pflege und Fachwissen. Wir kümmern uns mit Liebe zum Detail um Ihren Garten. Nach Wunsch können Jahresabos nach Ihren Bedürfnissen abgeschlossen werden, damit Sie zu jeder Jahreszeit Ihren Garten geniessen können.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Sträucher & Baumschnit</li></h6>
-                    <h6><li class="card-title">Staudenpflege</li></h6>
-                    <h6><li class="card-title">Rasenpflege</li></h6>
-                    <h6><li class="card-title">Rasensanierungen</li></h6>
-                    <h6><li class="card-title">Blumenwiesebetreuung</li></h6>
-                    <h6><li class="card-title">Pflanzenschutz (chemisch& biologisch)</li></h6>
-                    <h6><li class="card-title">Winterdienst</li></h6>
-                    <h6><li class="card-title">Weihnachtsdekorationen</li></h6>
-                    <h6><li class="card-title">Feriendienst</li></h6>
+                    <h6><li class="card-para">Sträucher & Baumschnit</li></h6>
+                    <h6><li class="card-para">Staudenpflege</li></h6>
+                    <h6><li class="card-para">Rasenpflege</li></h6>
+                    <h6><li class="card-para">Rasensanierungen</li></h6>
+                    <h6><li class="card-para">Blumenwiesebetreuung</li></h6>
+                    <h6><li class="card-para">Pflanzenschutz (chemisch& biologisch)</li></h6>
+                    <h6><li class="card-para">Winterdienst</li></h6>
+                    <h6><li class="card-para">Weihnachtsdekorationen</li></h6>
+                    <h6><li class="card-para">Feriendienst</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 d-flex col-lg-8 align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -452,26 +488,26 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Terrassenbau</h3>
-                  <p class="card-title card-para service-para">Wohnen auf Dächern wird durch das verdichtete Bauen immer mehr zum Thema. Damit Sie nicht auf Ihren Garten verzichten müssen gestalten wir Ihre Terrasse zu einem Aussenraum der einem Garten in nichts nachsteht. Wir verfügen über das technische Know-How und kennen die Herausforderungen die eine Terrasse mit sich bringt. Durch die Partnerschaft mit der Firma Hablützel verfügen wir über die nötigen Maschinen um grosse Höhen einfach überwinden zu können.</p>
+                  <p class="card-para para">Wohnen auf Dächern wird durch das verdichtete Bauen immer mehr zum Thema. Damit Sie nicht auf Ihren Garten verzichten müssen gestalten wir Ihre Terrasse zu einem Aussenraum der einem Garten in nichts nachsteht. Wir verfügen über das technische Know-How und kennen die Herausforderungen die eine Terrasse mit sich bringt. Durch die Partnerschaft mit der Firma Hablützel verfügen wir über die nötigen Maschinen um grosse Höhen einfach überwinden zu können.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Terassenneubau</li></h6>
-                    <h6><li class="card-title">Terassensanierung</li></h6>
-                    <h6><li class="card-title">Entwässerungen</li></h6>
-                    <h6><li class="card-title">Pflanztröge</li></h6>
-                    <h6><li class="card-title">Bepflanzungen</li></h6>
-                    <h6><li class="card-title">Bewässerungen</li></h6>
-                    <h6><li class="card-title">Beleuchtungen</li></h6>
-                    <h6><li class="card-title">Sonnenschutz</li></h6>
+                    <h6><li class="card-para">Terassenneubau</li></h6>
+                    <h6><li class="card-para">Terassensanierung</li></h6>
+                    <h6><li class="card-para">Entwässerungen</li></h6>
+                    <h6><li class="card-para">Pflanztröge</li></h6>
+                    <h6><li class="card-para">Bepflanzungen</li></h6>
+                    <h6><li class="card-para">Bewässerungen</li></h6>
+                    <h6><li class="card-para">Beleuchtungen</li></h6>
+                    <h6><li class="card-para">Sonnenschutz</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 d-flex col-lg-8 align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -486,23 +522,23 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Teich- und Poolbau</h3>
-                  <p class="card-title card-para service-para">Wasser belebt den Garten. Es bringt wunderschön entspannende Symphonien in den Garten, sei dies durch das Plätschern eines Wasserspiels oder durch die Musik der Teichtiere. Ein Sprung in den Pool oder Schwimmteich bringt eine kühle Erfrischung. Wir beraten Sie und bauen gerne Ihren Teich oder Pool, damit wir ins Schwitzen kommen und nicht Sie.</p>
+                  <p class="card-para service-para">Wasser belebt den Garten. Es bringt wunderschön entspannende Symphonien in den Garten, sei dies durch das Plätschern eines Wasserspiels oder durch die Musik der Teichtiere. Ein Sprung in den Pool oder Schwimmteich bringt eine kühle Erfrischung. Wir beraten Sie und bauen gerne Ihren Teich oder Pool, damit wir ins Schwitzen kommen und nicht Sie.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Planung</li></h6>
-                    <h6><li class="card-title">Neuerstellung von Teich & Pools</li></h6>
-                    <h6><li class="card-title">Teich & Pool Sanierungen</li></h6>
-                    <h6><li class="card-title">Reinigung</li></h6>
-                    <h6><li class="card-title">Wasserproben</li></h6>
+                    <h6><li class="card-para">Planung</li></h6>
+                    <h6><li class="card-para">Neuerstellung von Teich & Pools</li></h6>
+                    <h6><li class="card-para">Teich & Pool Sanierungen</li></h6>
+                    <h6><li class="card-para">Reinigung</li></h6>
+                    <h6><li class="card-para">Wasserproben</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 col-lg-8 d-flex align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -517,25 +553,25 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Gartenausgestaltung</h3>
-                  <p class="card-title card-para service-para">Wir schaffen Ambiente. Wir statten Ihren Garten mit den passenden Möbeln und Accessoires aus, damit Sie Ihren Garten optimal nutzen können. Ebenfalls schaffen wir durch Licht und Musik ein Ambiente für viele schöne Momente. Nicht zu vergessen, unsere praktischen Gadgets die Ihre Gartenarbeit erleichtern.</p>
+                  <p class="card-para service-para">Wir schaffen Ambiente. Wir statten Ihren Garten mit den passenden Möbeln und Accessoires aus, damit Sie Ihren Garten optimal nutzen können. Ebenfalls schaffen wir durch Licht und Musik ein Ambiente für viele schöne Momente. Nicht zu vergessen, unsere praktischen Gadgets die Ihre Gartenarbeit erleichtern.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Gartenbeleuchtung</li></h6>
-                    <h6><li class="card-title">Ausstattungen</li></h6>
-                    <h6><li class="card-title">Sonnenschutz</li></h6>
-                    <h6><li class="card-title">Bewässerungen</li></h6>
-                    <h6><li class="card-title">Wasserspiele & Brunnen</li></h6>
-                    <h6><li class="card-title">Möblierungen</li></h6>
-                    <h6><li class="card-title">Skulpturen</li></h6>
+                    <h6><li class="card-para">Gartenbeleuchtung</li></h6>
+                    <h6><li class="card-para">Ausstattungen</li></h6>
+                    <h6><li class="card-para">Sonnenschutz</li></h6>
+                    <h6><li class="card-para">Bewässerungen</li></h6>
+                    <h6><li class="card-para">Wasserspiele & Brunnen</li></h6>
+                    <h6><li class="card-para">Möblierungen</li></h6>
+                    <h6><li class="card-para">Skulpturen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 d-flex col-lg-8 align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -550,24 +586,24 @@
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
                   <h3 class="card-title">Spielplatzbau</h3>
-                  <p class="card-title card-para service-para">Gärten die Kinder lieben! Wir bauen für die Kleinen unter uns. Spiel und Spass, Platz für kreative Ideen und ein Ort für Begegnungen bedeutet Spielplatz für uns. Wir bauen und unterhalten die Spielplätze nach den neusten Normen des BFU und sind stets auf die Sicherheit der Kinder bedacht.</p>
+                  <p class="card-para service-para">Gärten die Kinder lieben! Wir bauen für die Kleinen unter uns. Spiel und Spass, Platz für kreative Ideen und ein Ort für Begegnungen bedeutet Spielplatz für uns. Wir bauen und unterhalten die Spielplätze nach den neusten Normen des BFU und sind stets auf die Sicherheit der Kinder bedacht.</p>
                 </div>
                 <div class="flip-card-back">
                   <h3 class="card-title">Diensleistungen</h3>
                   <ul class="service-list">
-                    <h6><li class="card-title">Planung</li></h6>
-                    <h6><li class="card-title">Spielplatz Neubau</li></h6>
-                    <h6><li class="card-title">Spielplatz Sanierungen</li></h6>
-                    <h6><li class="card-title">Spielplatz Pflege</li></h6>
-                    <h6><li class="card-title">Spielplatz Inspektionen</li></h6>
-                    <h6><li class="card-title">Diverse Austattungen</li></h6>
+                    <h6><li class="card-para">Planung</li></h6>
+                    <h6><li class="card-para">Spielplatz Neubau</li></h6>
+                    <h6><li class="card-para">Spielplatz Sanierungen</li></h6>
+                    <h6><li class="card-para">Spielplatz Pflege</li></h6>
+                    <h6><li class="card-para">Spielplatz Inspektionen</li></h6>
+                    <h6><li class="card-para">Diverse Austattungen</li></h6>
                   </ul>
                 </div>
               </div>
             </div>
             </div>
 
-            <div class="contact-button col-md-6 col-sm-8 d-flex align-items-end justify-content-end">
+            <div class="contact-button col-md-6 col-lg-8 d-flex align-items-end justify-content-end">
             <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="contact-icon" class="contact-image"></a>
             </div>
 
@@ -584,8 +620,8 @@
             <div class="flip-card-4 justify-content-center d-flex align-items-center align-self-center">
               <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                 <div class="flip-card-front">
-                  <h3 class="card-title">Leitbild</h3>
-                  <p class="card-title card-para service-para">Die Gartenmanufactur AG erstellt nachhaltige und qualitative Gärten zu fairen Preisen. Wir pflegen einen offenen, transparenten und fairen Umgang zu unseren Kunden, Mitarbeiter und Lieferanten. Wir fördern die persönliche und berufliche Weiterentwicklung unserer Mitarbeiter. Wir streben daher langjährige Geschäftsbeziehungen mit unseren Mitarbeiter, Kunden und Lieferanten an.</p>
+                  <h2 class="card-title">Leitbild</h2>
+                  <p class="card-para service-para">Die Gartenmanufactur AG erstellt nachhaltige und qualitative Gärten zu fairen Preisen. Wir pflegen einen offenen, transparenten und fairen Umgang zu unseren Kunden, Mitarbeiter und Lieferanten. Wir fördern die persönliche und berufliche Weiterentwicklung unserer Mitarbeiter. Wir streben daher langjährige Geschäftsbeziehungen mit unseren Mitarbeiter, Kunden und Lieferanten an.</p>
                 </div>
               </div>
             </div>
@@ -662,7 +698,7 @@
                 <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
                   <div class="flip-card-front">
                     <h2 class="card-title">Jobs</h2>
-                    <p class="card-para">Wir sind immer interessiert an gut ausgebildeten Berufsfachleuten, die Freude daran haben schöne Gärten zu bauen und pflegen.</p>
+                    <p class="card-para service-para">Wir sind immer interessiert an gut ausgebildeten Berufsfachleuten, die Freude daran haben schöne Gärten zu bauen und pflegen.</p>
                     <p class="card-para">Haben Sie interesse?</p>
                     <p class="card-para">Kontaktieren Sie uns.</p>
                   </div>
@@ -680,59 +716,58 @@
 
           <div class="form">
             <h3 class="form-heading">Kontaktieren Sie uns</h3>
-            <span id="error"></span>
-            <span id="sent"></span>
-            <form class="border-0" action="javascript:void(0)" method="POST">
+
+            <form class="border-0" action="javascript:void(0)" method="POST" id="formValidate">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="name" placeholder="Vorname">
+                  <input type="text" required class="form-control" id="name" name="name" placeholder="Vorname"><span></span>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nachname"><span></span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6 col-sm-9">
-                  <input type="text" class="form-control" id="street" placeholder="Strasse">
+                  <input type="text" class="form-control" name="street" id="street" placeholder="Strasse"><span></span>
                 </div>
                 <div class="form-group col-md-6 col-sm-3">
-                  <input type="text" class="form-control" id="number" placeholder="Nr.">
+                  <input type="text" class="form-control" name="number" id="number" placeholder="Nr."><span></span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6 col-sm-3">
-                  <input type="text" class="form-control" id="zip" placeholder="PLZ">
+                  <input type="text" class="form-control" id="zip" name="zip" placeholder="PLZ"><span></span>
                 </div>
                 <div class="form-group col-md-6 col-sm-9">
-                  <input type="text" class="form-control" id="location" placeholder="Ort">
+                  <input type="text" class="form-control" id="location" name="location" placeholder="Ort"><span></span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="fone" placeholder="Telefon">
+                  <input type="text" class="form-control" id="fone" name="fone" placeholder="Telefon"><span></span>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="email" placeholder="Email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email"><span></span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col">
-                  <select id='correspondence' class="form-control select">
+                  <select id='correspondence' name="correspondence" class="form-control select">
                     <option disabled selected class="form-control">Korrespondenz</option>
                     <option class="form-control">Email</option>
                     <option class="form-control">Brief</option>
                     <option class="form-control">Telefon</option>
-                  </select>
+                  </select><span></span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col">
-                  <select id='services' class="form-control select">
+                  <select id='services' name="services" class="form-control select">
                     <option disabled selected>Services</option>
                     <option>Gartenplanung</option>
                     <option>Gartenneubau</option>
@@ -742,13 +777,13 @@
                     <option>Teich- & Poolbau</option>
                     <option>Gartenausgestaltung</option>
                     <option>Spieplatzbau</option>
-                  </select>
+                  </select><span></span>
                 </div>
               </div>
 
             <div class="form-row">
               <div class="form-group col">
-                <textarea class="form-control select" id="message" rows="3" placeholder="Nachricht"></textarea>
+                <textarea class="form-control select" name="message" id="message" rows="3" placeholder="Nachricht"></textarea><span></span>
               </div>
             </div>
 
@@ -764,12 +799,12 @@
 
             <div class="address row d-flex align-items-center justify-content-center">
               <div class="col">
-                <h2 class="heading-address">Kontakt</h2>
+                <h2 class="heading-address card-title">Kontakt</h2>
                 <h4 class="footer">Gartenmanufactur AG</h4>
                 <h4 class="footer">Bahnhofstrasse 1</h4>
                 <h4 class="footer">8217 Wilchingen</h4>
                 <a href="tel:0794554584" class="mail"><h4 class="footer">Tel. 079 455 45 84</h4></a>
-                <a href="mailto:a.wiedmer@gm.ch" class="mail"><h4 class="footer">a.wiedmer@gm.ch</h4></a>
+                <a href="mailto:a.wiedmer@gartenmanufactur.ch" class="mail"><h4 class="footer">a.wiedmer@gartenmanufactur.ch</h4></a>
               </div>
             </div>
 
@@ -785,7 +820,7 @@
         <section class="main-impressum">
 
           <div class="impressum">
-            <h2 class="heading-impressum">Impressum</h2>
+            <h2 class="heading-impressum card-title">Impressum</h2>
             <div class="footer-links">
               <ul class="footer-list">
                 <li><h3 class="description">Gartenmanufactur AG</h3></li>
@@ -793,7 +828,7 @@
                 <li><h3 class="description">Bahnhofstrasse 1</h3></li>
                 <li><h3 class="description">8217 Wilchingen</h3></li>
                 <li><a href="tel:0794554584" class="mail"><h3 class="description">Tel. 079 455 45 84</h3></a></li>
-                <li><a href="mailto:a.weidmer@gm.ch" class="mail"><h3 class="description">a.wiedmer@gm.ch</h3></a></li>
+                <li><a href="mailto:a.weidmer@gartenmanufactur.ch" class="mail"><h3 class="description">a.wiedmer@gartenmanufactur.ch</h3></a></li>
               </ul>
               <h3 class="description">MWST-/UID-Nummer: CHE-293.604.882</h3>
             </div>
