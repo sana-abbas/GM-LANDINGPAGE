@@ -508,6 +508,14 @@ textarea.form-control{
   margin-left: 4%;
   color: red;
 }
+#sent{
+  color: rgb(255, 125, 81);
+  display: none;
+  padding: 10%;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
 
 /* Address Section */
 
@@ -836,5 +844,9 @@ textarea.form-control{
 }
 .description{
   font-size: 15px;
+}
+#sent{
+  padding: 25% 21px;
+  font-size: 24px;
 }
 }

@@ -188,7 +188,15 @@
         },
       }
     });
+
     $('#submit').click(function(){
+
+      var isvalid = $('#formValidate').valid();
+      if (!isvalid) {
+        console.log('error in validation');
+        return false;
+      }else {
+
       var formData = {
         'name' : $('#name').val(),
         'lastName' : $('#lastName').val(),
@@ -215,17 +223,17 @@
 
           success: function(response) {
               console.log(response);
-             $('.myForm').hide();
+             $('form').hide();
              $('.form-heading').hide();
-             $('#error').hide();
-             $('#sent').html("Thank You for Registering!" + "<br>" + " We will get back to you soon.").css({'color':'#49c5b6','display':'block','margin-left':'5%', 'margin-right':'10%' , 'margin-top':'40%','font-size':'2em','font-weight': '700','text-align': 'center'});
+             $('#sent').css('display' , 'block');
+             $('#sent').show();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + " :: " + textStatus + " :: " + errorThrown);
         }
-
       });
-  });
+}
+      });
 
     //   $('.flip-card').click(function() {
     //   $(this).toggleClass('flipped');
@@ -709,6 +717,7 @@
 
           <div class="form">
             <h3 class="form-heading">Kontaktieren Sie uns</h3>
+            <span id="sent">Vielen Dank für ihre Kontaktaufnahme! Wir werden uns bald bei Ihnen melden.</span>
 
             <form class="border-0" action="javascript:void(0)" method="POST" id="formValidate">
               <div class="form-row">

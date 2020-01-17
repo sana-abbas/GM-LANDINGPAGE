@@ -3,6 +3,7 @@ date_default_timezone_set('Asia/Karachi');
 require __DIR__ .'/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 
+
 if (isset($_POST['formData'])) {
 	$name = $_POST['formData']['name'];
 	$lastName = $_POST['formData']['lastName'];
