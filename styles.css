@@ -36,15 +36,15 @@ body{
 }
 .menu-icon{
   display: none;
-  width: 120px;
-  height: 73px;
+  width: 150px;
+  height: 90px;
   position: relative;
   left: -100px;
   z-index: 9998;
 }
 .nav-list{
   height: 100vh;
-  padding-top: 4%;
+  padding-top: 8%;
 }
 #menu{
   background-color: #EDE8DA;
@@ -131,7 +131,7 @@ body{
   font-size: 36px;
 }
 .first{
-  background-image: url('images/home.png');
+  background-image: url('images/home.jpeg');
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -353,8 +353,8 @@ body{
   padding: 0 7%;
 }
 ul.service-list{
-  list-style-position: inside ;
-  padding: 0;
+  text-align: left;
+  padding-right: 10px;
   padding-top: 20px;
 }
 .service-para{
@@ -402,7 +402,7 @@ ul.service-list{
   z-index: 99;
 }
 .card-inner{
-  background-color: rgba(237, 232, 218, 0.85);;
+  background-color: rgba(237, 232, 218, 0.85);
   box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   position: relative;
   border-radius: 15px;
@@ -458,7 +458,7 @@ ul.service-list{
   padding-top: 5%;
 }
 .form{
-  background-color: rgba(204, 204, 204, 0.85);
+  background-color: rgba(237, 232, 218, 0.85);
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   width: 80%;
   border-radius: 15px;
@@ -528,7 +528,7 @@ textarea.form-control{
 .address{
   width: 370px;
   height: 350px;
-  background-color: rgba(204, 204, 204, 0.85);
+  background-color: rgba(237, 232, 218, 0.85);
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   border-radius: 15px;
   text-align: center;
@@ -568,7 +568,7 @@ textarea.form-control{
   position: absolute;
   left: 50%;
   transform: translate(-50%,27%);
-  background-color: rgba(204, 204, 204, 0.85);
+  background-color: rgba(237, 232, 218, 0.85);
   box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   border-radius: 15px;
   text-align: center;
