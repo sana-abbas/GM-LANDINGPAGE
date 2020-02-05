@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bildergalerie</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="slick/slick/slick.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="gallery/css/lightbox.min.css">
+    <script type="text/javascript" src="gallery/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="gallery/js/masonry.pkgd.min.js"></script>
+    <link href="gallery/dist/css/lightgallery.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="gallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="gallery/lib/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      $(document).ready(function(){
+
+        $('.dropdown-item, #home, #impressum').click(function(){
+           $('.navbar-collapse').collapse('hide');
+            $('.menu-icon').toggle();
+            $('.heading').toggle();
+            $(".navbar-toggler").find('span:first').toggleClass("icon-close navbar-toggler-icon");
+         });
+
+        $("button[data-toggle=collapse]").on('click', function(){
+          $(this).find('span:first').toggleClass("icon-close navbar-toggler-icon");
+          $('.menu-icon').toggle();
+          $('.heading').toggle();
+        });
+        $('.gallery').masonry({
+          itemSelector: '.grid-item',
+          isFitWidth: true,
+        });
+
+        $(".gallery").lightGallery();
+      });
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+    <div class="container-fluid header-section" id="header-section">
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="navbar-brand">
+          <a href="#"><img src="images/nav-icon.png" alt="logo" class="nav-icon"></a>
+          <img src="images/menu-icon.png" alt="logo" class="menu-icon">
+        </div>
+        <span class="heading align-items-center">Gärtenneubau</span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-list">
+            <li class="nav-item">
+              <a class="nav-link" id="home" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bildergalerie.html">Bildergalerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="gartenneubau.html">Gartenneubau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="bildergalerie.html">Gartenumänderung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="bildergalerie.html">Gartenunterhalt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="bildergalerie.html">Teich & Poolbau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="bildergalerie.html">Gartenausgestaltung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="bildergalerie.html">Speilplatzbau</a>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle services" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bildergalerie</a>
+             <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item gartenplanung" href="javascript:void(0)">Gartenplanung & Beratung</a>
+               <a class="dropdown-item gartenneubau" href="javascript:void(0)">Gartenneubau</a>
+               <a class="dropdown-item gartenumänderung" href="javascript:void(0)">Gartenumänderung</a>
+               <a class="dropdown-item gartenunterhalt" href="javascript:void(0)">Gartenunterhalt</a>
+               <a class="dropdown-item terrassenbau" href="javascript:void(0)">Terrassenbau</a>
+               <a class="dropdown-item teich" href="javascript:void(0)">Teich- & Poolbau</a>
+               <a class="dropdown-item gartenausgestaltung" href="javascript:void(0)">Gartenausgestaltung</a>
+               <a class="dropdown-item spielplatzbau" href="javascript:void(0)">Spielplatzbau</a>
+             </div>
+           </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+              <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" id="leitbild" href="javascript:void(0)">Leitbild</a>
+                <a class="dropdown-item" id="team" href="javascript:void(0)">Team</a>
+                <a class="dropdown-item" id="jobs" href="javascript:void(0)">Jobs</a>
+               <a class="dropdown-item" href="javascript:void(0)">Bildergalerie</a>
+              </div>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kontakt</a>
+              <div class="dropdown-menu align-items-center justify-content-center" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" id="kontakt" href="javascript:void(0)">Anfrageformular</a>
+                <a class="dropdown-item" id="address" href="javascript:void(0)">Kontakt</a>
+              </div>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" id="impressum" href="index.html">Impressum</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <main>
+
+      <section class="gallery-main d-flex align-items-center justify-content-center">
+
+        <div class="gallery">
+          <a href="gallery/gartenneubau/gartenneubau1.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau1.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau2.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau2.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau3.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau3.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau4.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau4.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau5.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau5.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau6.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau6.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau7.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau7.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau8.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau8.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau9.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau9.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau10.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau10.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau11.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau11.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau12.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau12.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau13.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau13.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau14.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau14.jpg" alt=""></a>
+          <a href="gallery/gartenneubau/gartenneubau15.jpg"  class="grid-item"><img src="gallery/gartenneubau/gartenneubau15.jpg" alt=""></a>
+        </div>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>
