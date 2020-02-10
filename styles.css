@@ -334,7 +334,7 @@ body{
 /* Services Section */
 
 .gartenplanung-main{
-  background-image: url('images/gartenplanung.jpg');
+  background-image: url('images/gartenplanung.png');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -408,6 +408,10 @@ ul.service-list{
   width: 110px;
   height: 80px;
   z-index: 20;
+}
+.gallery-link{
+  padding: 7% 0 0;
+  text-align: right;
 }
 
 /* Leitbild Section */
@@ -674,6 +678,9 @@ textarea.form-control{
 #lg-share{
   display: none;
 }
+.spielplatzbau{
+  height: 100vh;
+}
 .gallery-slider{
   height: 100vh!important;
 }
@@ -817,7 +824,7 @@ textarea.form-control{
   padding-left: 0;
 }
 .gartenplanung-main{
-  background-image: url('images/gartenplanung-mobile.png');
+  background-image: url('images/gartenplanung-mobile.jpg');
 }
 .gartenneubau-main{
   background-image: url('images/gartenneubau-mobile.jpg');
