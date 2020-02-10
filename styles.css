@@ -639,6 +639,7 @@ textarea.form-control{
 .nav-gallery{
   font-weight: normal!important;
   font-family: config-light!important;
+  font-size: 2em!important;
 }
 .gallery-main{
   background-color: #EDE8DA;
@@ -649,8 +650,9 @@ textarea.form-control{
 }
 .gallery a img{
 	height:250px;
-	padding:15px;
 	transition:1s;
+  border-radius: 15px;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
 }
 .gallery img:hover{
 	filter:grayscale(100%);
@@ -672,6 +674,28 @@ textarea.form-control{
 #lg-share{
   display: none;
 }
+.gallery-slider{
+  height: 100vh!important;
+}
+.slider-img{
+  width: 500px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+}
+.text-slider{
+  margin-top: 4%;
+}
+.slider-text{
+  color: #FF5722;
+  text-align: center;
+  outline: none;
+}
+.slider-text:hover{
+  color: #FF5722;
+}
+
+
 /*------------------------ Small Laptop and Tablets Breakpoint -----------------------------*/
 
 @media only screen and (max-width : 1024px){
@@ -985,5 +1009,16 @@ textarea.form-control{
 }
 .gallery{
   padding-top: 20%;
+}
+.nav-gallery{
+  font-size: 20px!important;
+}
+.slider-img{
+  width: 250px;
+  height: 300px;
+}
+.text-slider{
+  font-size: 1.5rem;
+  margin-top: 8%;
 }
 }
