@@ -469,7 +469,13 @@ ul.service-list{
 }
 .slider-team{
   height: 100vh;
-  padding: 11% 0%;
+}
+.news-main{
+  background-image: url('images/news.png');
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Jobs Section */
@@ -681,7 +687,7 @@ textarea.form-control{
 .spielplatzbau{
   height: 100vh;
 }
-.gallery-slider{
+.gallery-slider, .news-slider{
   height: 100vh!important;
 }
 .slider-img{
@@ -700,6 +706,9 @@ textarea.form-control{
 }
 .slider-text:hover{
   color: #FF5722;
+}
+.slick-slide{
+  height: -webkit-fill-available;
 }
 
 
