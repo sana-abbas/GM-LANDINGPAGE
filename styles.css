@@ -263,6 +263,7 @@ body{
 .card-para{
   font-size: 18px;
   font-family: 'Open Sans';
+  outline: none;
 }
 .mobile-para{
   font-size: 22px;
@@ -597,6 +598,7 @@ textarea.form-control{
 }
 .mail{
   color: #212529;
+  outline: none;
 }
 .mail:hover{
   color: #FF5722;
@@ -649,7 +651,7 @@ textarea.form-control{
 .nav-gallery{
   font-weight: normal!important;
   font-family: config-light!important;
-  font-size: 2em!important;
+  font-size: 1.5em!important;
 }
 .gallery-main{
   background-color: #EDE8DA;
@@ -684,7 +686,7 @@ textarea.form-control{
 #lg-share{
   display: none;
 }
-.spielplatzbau{
+.spielplatzbau, .operative, .neues{
   height: 100vh;
 }
 .gallery-slider, .news-slider{
