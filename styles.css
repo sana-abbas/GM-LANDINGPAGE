@@ -1,0 +1,852 @@
+@font-face {
+  font-family: config;
+  src: url('fonts/config-medium.otf');
+}
+@font-face {
+  font-family: config-light;
+  src: url('fonts/config-light.otf');
+}
+body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.col, .col-lg-4{
+  padding-left: 0;
+  padding-right: 0;
+}
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Nav Bar */
+
+.bg-light {
+  background-color:rgba(255, 102, 51, 0.85)!important;
+  box-shadow: -30px -30px 20px rgba(0, 0, 0, 0.4), inset -5px -5px 20px rgba(0, 0, 0, 0.25);
+}
+.nav-icon{
+  width: 100px;
+  height: 60px;
+}
+.menu-icon{
+  display: none;
+  width: 150px;
+  height: 90px;
+  position: relative;
+  left: -100px;
+  z-index: 9998;
+}
+.nav-list{
+  height: 100vh;
+  padding-top: 8%;
+}
+#menu{
+  background-color: #EDE8DA;
+  position: absolute;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url('images/menu.png');
+  width: 40px;
+  height: 40px;
+}
+.navbar-light .icon-close {
+  background-image: url('images/close.png');
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  content: "X";
+  color: orange;
+  background-size: 100% 100%;
+  z-index: 9998;
+}
+.navbar-light .navbar-nav .nav-link {
+  text-align: center;
+  font-family: 'config';
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+  font-size: 2.4em;
+}
+.navbar-light .navbar-brand {
+    padding-left: 2%;
+    padding-top: 10px;
+}
+.navbar-light .navbar-toggler{
+  color: transparent;
+  border-color: transparent;
+  outline: none;
+  z-index: 9999
+}
+.navbar-nav .dropdown-menu{
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+  background-color: #EDE8DA;
+  border: 1px solid transparent;
+}
+.dropdown-item{
+  font-family: 'config-light';
+  font-size: 20px;
+}
+.dropdown-item:hover{
+   color: rgba(0,0,0,.7);
+   background-color: #EDE8DA;
+}
+.nav-link.dropdown-toggle.services{
+  padding-bottom: 0;
+}
+.nav-link.dropdown-toggle.uber{
+  padding-bottom: 0;
+}
+.dropdown-menu{
+  padding: 0;
+  margin: 0;
+}
+.dropdown-item{
+  padding: 0;
+}
+
+/* Header Section */
+
+#header-section{
+  max-width: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.heading{
+  font-family: 'config-light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+}
+.first{
+  background-image: url('images/home.jpeg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.second{
+  background-image: url('images/home2.jpeg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.third{
+  background-image: url('images/home3.jpeg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+ .flip-card{
+  perspective: 1000px;
+  outline: none;
+  width: 425px;
+  height: 440px;
+}
+.flipCard{
+  perspective: 1000px;
+  outline: none;
+  width: 500px;
+  height: 450px;
+}
+.flip-card-inner {
+  background-color: rgba(237, 232, 218, 0.85);;
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flipCard:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-2:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  color: black;
+}
+.card{
+  background-color: transparent;
+  border: 1px transparent;
+  position: absolute;
+  left: 170px;
+  z-index: 99;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.carousel-control-next-icon{
+  background-image: url('images/next.png');
+  width: 75px;
+  height: 128px;
+  position: absolute;
+  right: 20px;
+}
+.carousel-control-prev-icon{
+  width: 75px;
+  height: 128px;
+  background-image: url('images/prev.png');
+  position: absolute;
+  left: 20px;
+}
+.card-body{
+  padding: 0;
+}
+.menu-icon-2{
+  width: 350px;
+  height: 230px;
+}
+.card-title{
+  font-family: 'config';
+  color: #ff6633;
+}
+.card-para{
+  font-size: 18px;
+  font-family: 'Open Sans';
+}
+.mobile-para{
+  font-size: 18px;
+  font-family: 'Open Sans';
+}
+.main-para{
+  padding: 0 2%;
+}
+
+/* Event Section */
+
+.event{
+  background-image: url('images/home.png');
+  width: 100%;
+  background-size: cover;
+}
+.slider{
+  height: 100vh;
+  padding: 15% 5%;
+}
+.flip-card-3 {
+ perspective: 1000px;
+ outline: none;
+ width: 325px;
+ height: 325px;
+}
+.events-images{
+  background-image: url('images/home.png');
+  height: 100vh;
+  background-size: cover;
+}
+ .events-inner{
+  margin: 0 auto;
+}
+.events{
+  padding: 5%;
+}
+.img-event{
+  border: 20px solid rgba(237, 232, 218, 0.6);
+  margin: 0 auto;
+  width: 65%;
+  height: 70%;
+  border-radius: 15px;
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+}
+.close{
+  position: relative;
+  opacity: 1;
+  right: 19%;
+  width: 40px;
+}
+.arrow_next{
+  position: absolute;
+  bottom: 40%;
+  right: 20px;
+  z-index: 99;
+  width: 70px;
+  height: 120px;
+}
+.arrow_prev{
+  position: absolute;
+  bottom: 40%;
+  left: 20px;
+  z-index: 99;
+  width: 70px;
+  height: 120px;
+}
+
+/* Services Section */
+
+.gartenplanung-main{
+  background-image: url('images/gartenplanung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenneubau-main{
+  background-image: url('images/gartennebau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenumanderung-main{
+  background-image: url('images/gartenmanderung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenunterhalt-main{
+  background-image: url('images/gartenunterhalt.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.gartenausgestaltung-main{
+  background-image: url('images/gartenausgestaltung.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.spielplatzbau-main{
+  background-image: url('images/spielpatzbau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.teich-main{
+  background-image: url('images/teich.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.terrassenbau-main{
+  background-image: url('images/terrassenbau.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  padding-left: 10%;
+}
+.para{
+  padding: 0 7%;
+}
+ul.service-list{
+  text-align: left;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+.service-para{
+  padding: 15px 7%;
+}
+.contact-button{
+  z-index: 20;
+  padding-bottom: 10%;
+}
+.contact-image{
+  width: 110px;
+  height: 80px;
+  z-index: 20;
+}
+
+/* Leitbild Section */
+
+.leitbild-main{
+  background-image: url('images/leitbild.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
+.flip-card-4{
+  perspective: 1000px;
+  outline: none;
+  width: 600px;
+  height: 500px;
+}
+.leitbild{
+  transform: translate(0%, 27%);
+}
+
+/* Team Section */
+
+.team{
+  background-image: url('images/team-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
+.card-5{
+  background-color: transparent;
+  border: 1px transparent;
+  z-index: 99;
+}
+.card-inner{
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.team-text{
+  font-size: 18px;
+  font-family: 'Open Sans';
+}
+.rounded-img{
+  width: 200px;
+  height: 200px;
+}
+.slick-slide img{
+  display: initial;
+}
+.slider-team{
+  height: 100vh;
+  padding: 11% 0%;
+}
+
+/* Jobs Section */
+
+.jobs{
+  background-image: url('images/jobs.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+}
+.main-jobs{
+  transform: translate(0%, 27%);
+}
+.contact-img{
+  width: 110px;
+  height: 80px;
+  z-index: 20;
+  margin-right: 10px;
+  margin-top: 145px;
+  float: right;
+}
+
+/* Form Section */
+
+.myForm{
+  background-image: url('images/kontakt.jpeg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5%;
+}
+.form{
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  width: 80%;
+  border-radius: 15px;
+}
+.form-heading{
+  padding: 2% 3%;
+  padding-bottom: 1%;
+}
+.form-control{
+  background-color: transparent;
+  border: 0;
+  color: black;
+  margin-left: 4%;
+  width: 90%;
+  font-size: 18px;
+  border-bottom: 3px solid #FF4500;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  outline: none;
+}
+.form-control::-webkit-input-placeholder{
+   color: black;
+}
+.form-group{
+  margin-bottom: 0.75rem;
+}
+textarea.form-control{
+  height: auto;
+}
+.select{
+  width: 95%;
+  margin-left: 2%;
+}
+.senden{
+  padding-bottom: 3%;
+}
+.submit-btn{
+  text-align: center;
+  background-color: rgba(255, 69, 0, 0.51);
+  margin: 0 auto;
+  padding: 1% 10%;
+  font-size: 20px;
+}
+.submit-btn:hover{
+  background-color: rgba(255, 69, 0);
+}
+.error{
+  margin-left: 4%;
+  color: red;
+}
+#sent{
+  color: rgb(255, 125, 81);
+  display: none;
+  padding: 10%;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Address Section */
+
+.main-address{
+  height: 100vh;
+  background-image: url('images/gartenplanung.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+.address{
+  width: 370px;
+  height: 350px;
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'config';
+  margin: 0 auto;
+  transform: translate(0px, 125px);
+}
+.social-links{
+  margin: 0 auto;
+  width: 180px;
+  height: 200px;
+  transform: translate(0px, 150px);
+}
+.heading-address{
+  padding-bottom: 5%;
+}
+.mail{
+  color: #212529;
+}
+.facebook{
+  margin-right: 35px;
+  width: 60px;
+}
+.instagram{
+  width: 70px;
+}
+
+/* Impressum Section */
+
+.main-impressum{
+  background-image: url('images/impressum.jpeg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.impressum{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,27%);
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'config';
+  width: 600px;
+  height: 530px;
+}
+.heading-impressum{
+  padding-top: 4%;
+}
+.footer-links{
+  padding-bottom: 2%;
+}
+.footer-list{
+  list-style-type: none;
+  font-family: 'config-light';
+  font-size: 18px;
+  padding: 0;
+}
+.description{
+  font-family: 'config-light';
+  font-size: 20px;
+}
+
+/*------------------------ Small Laptop and Tablets Breakpoint -----------------------------*/
+
+@media only screen and (max-width : 1024px){
+  .flip-card{
+    height: 375px;
+    width: 340px;
+  }
+  .flipCard{
+    height: 420px;
+    width: 340px;
+  }
+  .menu-icon-2{
+    width: 300px;
+  }
+  .card-para{
+    font-size: 15px;
+  }
+  .mobile-para{
+    font-size: 15px;
+  }
+  .slider{
+    padding: 20% 5%;
+  }
+  .flip-card-4{
+    height: 435px;
+    width: 525px;
+  }
+  .slider-team{
+    height: 100vh;
+    padding: 15% 0%;
+  }
+  .contact-image{
+    width: 90px;
+    height: 70px;
+  }
+  .contact-img {
+    width: 90px;
+    height: 70px;
+    z-index: 20;
+    margin-right: 70px;
+    margin-top: 135px;
+    float: right;
+  }
+  .myForm{
+    padding-top: 10%;
+  }
+  .form-control{
+    font-size: 16px;
+  }
+  .impressum{
+    width: 550px;
+    height: 500px;
+    transform: translate(-50%,25%)
+  }
+  .description{
+    font-size: 1.2rem
+  }
+}
+
+/*------------------------------- Mobile Breakpoint -------------------------------------*/
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+.navbar{
+  padding-right: 0;
+}
+.navbar-light .navbar-brand {
+    padding-left: 0;
+}
+.nav-icon {
+    width: 65px;
+    height: 40px;
+}
+.heading{
+  font-size: 17px;
+}
+.navbar-light .navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+.navbar-light .icon-close {
+  width: 30px;
+  height: 30px;
+}
+.menu-icon {
+  width: 90px;
+  height: 50px;
+  left: -75px;
+}
+.nav-list{
+  padding-top: 32%;
+}
+.navbar-light .navbar-nav .nav-link{
+  font-size: 25px;
+}
+.dropdown-item{
+  font-size: 18px;
+}
+.flip-card,.flipCard{
+  width: 275px;
+  height: 380px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  padding: 0;
+}
+.gartenplanung-main, .gartenneubau-main, .terrassenbau-main, .teich-main, .spielplatzbau-main, .gartenunterhalt-main, .gartenumanderung-main, .gartenausgestaltung-main{
+  padding-left: 0;
+}
+.align-self-center{
+  align-self: auto!important;
+}
+.w-100{
+  width: auto!important;
+}
+.carousel-control-next , .carousel-control-prev{
+  align-items: flex-end;
+  bottom: 100px;
+}
+.gallery-next, .gallery-prev{
+  align-items: flex-end;
+  bottom: -50px!important;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 15px;
+  height: 40px;
+}
+.arrow_next, .arrow_prev{
+  width: 15px;
+  height: 40px;
+  align-items: flex-end;
+  bottom: 100px;
+}
+.menu-icon-2{
+  width: 230px;
+  height: 180px;
+}
+.card-title{
+  font-size: 1.5rem;
+}
+.card-para,.team-text{
+  font-size: 14px;
+}
+.main-para{
+  font-size: 13px;
+  padding: 0 3px;
+  margin-bottom: 0.5rem;
+}
+.mobile-para{
+  font-size: 13px;
+  font-family: 'Open Sans'
+}
+.flip-card-3{
+  width: 250px;
+  height: 250px;
+}
+.img-event{
+  width: 100%;
+  height: 60%;
+}
+.close{
+  top: 32px;
+  right: 0;
+  width: 30px;
+}
+.slider{
+  padding: 35% 5%;
+}
+.event, .events-images{
+  background-image: url('images/home-mobile.jpg');
+}
+.contact-button{
+  position: relative;
+  transform: translate(-36%,0);
+  padding-bottom: 20%;
+}
+.contact-image{
+  width: 70px;
+  height: 60px;
+}
+.contact-btn{
+  position: absolute;
+  right: 40%;
+  margin-top: 38%;
+}
+.contact-img{
+  width: 70px;
+  height: 60px;
+  margin-right: 0;
+  margin-top: 0;
+}
+.rounded-img{
+  width: 150px;
+  height: 150px;
+}
+.flip-card-4{
+  width: 275px;
+  height: 380px;
+}
+.slider-team{
+  height: 100vh;
+  padding: 30% 0%;
+}
+ .myForm{
+  padding-top: 21%;
+}
+.form-heading{
+  font-size: 20px;
+}
+.form-group{
+  margin-bottom: 0.75rem;
+}
+.form-control{
+  font-size: 15px;
+  padding: 0;
+  height: calc(1em + .70rem + 1px);
+}
+textarea.form-control{
+  height: calc(1em + .70rem + 1px);
+}
+.submit-btn{
+  font-size: 15px;
+}
+.address{
+  width: 250px;
+  height: 250px;
+}
+.senden{
+  padding-bottom: 3%;
+}
+.footer{
+  font-size: 1rem;
+}
+.facebook{
+  margin:0 30px;
+  width: 40px;
+}
+.instagram{
+  width: 50px;
+}
+.impressum{
+  width: 290px;
+  height: 450px;
+}
+.heading-impressum{
+  font-size: 1.5rem;
+}
+.footer-heading{
+  font-size: 20px;
+}
+.description{
+  font-size: 15px;
+}
+#sent{
+  padding: 25% 21px;
+  font-size: 24px;
+}
+}
