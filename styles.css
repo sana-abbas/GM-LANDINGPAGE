@@ -774,6 +774,9 @@ textarea.form-control{
   .gallery{
     padding-top: 10%;
   }
+  .spielplatzbau{
+    height: fit-content;
+  }
 }
 
 /*------------------------------- Mobile Breakpoint -------------------------------------*/
@@ -1038,5 +1041,8 @@ textarea.form-control{
 .text-slider{
   font-size: 1.5rem;
   margin-top: 8%;
+}
+.spielplatzbau, .neues{
+  height: fit-content;
 }
 }
