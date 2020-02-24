@@ -164,6 +164,36 @@
 ]
     });
 
+    $('.jobs-slider').slick({
+      dots:false,
+      arrows:true,
+      nextArrow:'<img src="images/next.png" class="arrow_next">',
+      prevArrow:'<img src="images/prev.png" class="arrow_prev">',
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 900,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1 ,
+    }
+  }
+]
+    });
+
     $('#formValidate').validate({
       rules:{
         name:{
@@ -751,12 +781,30 @@
 
         <!-- Jobs -->
 
-        <section class="jobs">
+        <div class="jobs">
 
-            <div class="container-fluid jobs-main row d-flex align-items-center justify-content-center main-jobs">
-              <div class="flip-card-4 align-self-center">
-                <div class="flip-card-inner card-body d-flex align-items-center justify-content-center">
-                  <div class="flip-card-front d-flex align-items-center justify-content-center">
+          <div class="jobs-slider">
+
+            <div class="container-fluid row d-flex align-items-center justify-content-center">
+              <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div>
+                      <p class="card-para jobs-para">wir suchen eine/n</p>
+                      <h2 class="card-title jobs-para jobs-heading">Kundengärtner/-in</h2>
+                      <p class="card-para">mit einem grünen Daumen</p>
+                      <p class="card-para job-para">Du hast Freude an der Pflanzenwelt, pflegst gerne schöne und anspruchsvolle Gärten, arbeitest selbständig und geniesst den Kundenkontakt zu unsern wertvollen Kunden, dann bist du die richtige Person für uns. Wir bieten eine attraktive Entlöhnung und unterstützen dich bei deinen beruflichen Weiterbildungen.Zusätzliche Fringe Benefits warten ebenfalls auf dich!</p>
+                      <p class="card-para job-para "> Haben wir dein Interessen geweckt? Melde dich über das Kontaktformular, per Mail oder auf 079 455 45 84. Wir freuen uns auf dich!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid row d-flex align-items-center justify-content-center">
+              <div class="flip-card-4 justify-content-center d-flex align-items-center card-5 align-self-center">
+                <div class="card-inner card-body d-flex align-items-center justify-content-center">
+                  <div class="d-flex align-items-center justify-content-center">
                     <div>
                       <h2 class="card-title">Jobs</h2>
                       <p class="card-para service-para">Wir sind immer interessiert an gut ausgebildeten Berufsfachleuten, die Freude daran haben schöne Gärten zu bauen und pflegen.</p>
@@ -768,11 +816,8 @@
               </div>
             </div>
 
-            <div class="contact-btn">
-              <a href="javascript:void(0)" class="contact"><img src="images/contact-button.png" alt="" class="contact-img"></a>
-            </div>
-
-        </section>
+          </div>
+        </div>
 
         <section class="myForm d-flex align-items-center justify-content-center">
 

@@ -490,6 +490,12 @@ ul.service-list{
 .main-jobs{
   transform: translate(0%, 27%);
 }
+.jobs-para{
+  margin-bottom: 0!important;
+}
+.job-para{
+  padding: 15px 7%;
+}
 .contact-img{
   width: 110px;
   height: 80px;
@@ -686,7 +692,7 @@ textarea.form-control{
 #lg-share{
   display: none;
 }
-.spielplatzbau, .operative, .neues{
+.spielplatzbau-main, .operative, .neues{
   height: 100vh;
 }
 .gallery-slider, .news-slider{
@@ -774,7 +780,7 @@ textarea.form-control{
   .gallery{
     padding-top: 10%;
   }
-  .spielplatzbau{
+  .spielplatzbau-main{
     height: fit-content;
   }
 }
@@ -1042,7 +1048,14 @@ textarea.form-control{
   font-size: 1.5rem;
   margin-top: 8%;
 }
-.spielplatzbau, .neues{
+.spielplatzbau-main, .neues{
   height: fit-content;
+}
+.job-para{
+  font-size: 12px!important;
+  padding: 0px 7%;
+}
+.jobs-heading{
+  font-size: 17px!important;
 }
 }
