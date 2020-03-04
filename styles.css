@@ -78,6 +78,10 @@ body{
   color: black;
   font-size: 2.4em;
 }
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(255, 69, 0);
+  outline: 0;
+}
 .navbar-light .navbar-brand {
     padding-left: 2%;
     padding-top: 10px;
@@ -100,8 +104,9 @@ body{
   font-size: 20px;
 }
 .dropdown-item:hover{
-   color: rgba(0,0,0,.7);
+   color: rgb(255, 69, 0);
    background-color: #EDE8DA;
+   outline: 0;
 }
 .nav-link.dropdown-toggle.services{
   padding-bottom: 0;
@@ -131,19 +136,19 @@ body{
   font-size: 36px;
 }
 .first{
-  background-image: url('images/home.jpeg');
+  background-image: url('images/home.jpg');
   height: 100vh;
   background-position: center;
   background-size: cover;
 }
 .second{
-  background-image: url('images/home2.jpeg');
+  background-image: url('images/home2.jpg');
   height: 100vh;
   background-position: center;
   background-size: cover;
 }
 .third{
-  background-image: url('images/home3.jpeg');
+  background-image: url('images/home3.jpg');
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -153,47 +158,82 @@ body{
   outline: none;
   width: 425px;
   height: 440px;
+  -webkit-perspective: 1000px;
+  -o-perspective: 1000px;
+  -moz-perspective: 1000px;
 }
 .flipCard{
-  perspective: 1000px;
-  outline: none;
   width: 500px;
   height: 450px;
+  perspective: 1000px;
+  outline: none;
+  background: transparent;
+  z-index: 99;
+  left: 170px;
+  position: absolute;
+  -webkit-perspective: 1000px;
+  -o-perspective: 1000px;
+  -moz-perspective: 1000px;
 }
 .flip-card-inner {
-  background-color: rgba(237, 232, 218, 0.85);;
-  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
   position: relative;
-  border-radius: 15px;
   width: 100%;
-  height: 100%;
+  height: inherit;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.8s;
+  -o-transform-style: preserve-3d;
+  -o-transition: -o-transform 0.8s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: -moz-transform 0.8s;
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 .flipCard:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 .flip-card-2:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
-.flip-card-front, .flip-card-back {
+.flipCard-front, .flipCard-back {
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   backface-visibility: hidden;
   color: black;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
-.card{
-  background-color: transparent;
-  border: 1px transparent;
+.flip-card-front, .flip-card-back {
+  background-color: rgba(237, 232, 218, 0.85);
+  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: 170px;
-  z-index: 99;
+  backface-visibility: hidden;
+  color: black;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
-.flip-card-back {
+.flip-card-back,.flipCard-back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
 }
 .carousel-control-next-icon{
   background-image: url('images/next.png');
@@ -223,56 +263,14 @@ body{
 .card-para{
   font-size: 18px;
   font-family: 'Open Sans';
+  outline: none;
 }
 .mobile-para{
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Open Sans';
 }
 .main-para{
   padding: 0 2%;
-}
-
-/* Event Section */
-
-.event{
-  background-image: url('images/home.png');
-  width: 100%;
-  background-size: cover;
-}
-.slider{
-  height: 100vh;
-  padding: 15% 5%;
-}
-.flip-card-3 {
- perspective: 1000px;
- outline: none;
- width: 325px;
- height: 325px;
-}
-.events-images{
-  background-image: url('images/home.png');
-  height: 100vh;
-  background-size: cover;
-}
- .events-inner{
-  margin: 0 auto;
-}
-.events{
-  padding: 5%;
-}
-.img-event{
-  border: 20px solid rgba(237, 232, 218, 0.6);
-  margin: 0 auto;
-  width: 65%;
-  height: 70%;
-  border-radius: 15px;
-  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
-}
-.close{
-  position: relative;
-  opacity: 1;
-  right: 19%;
-  width: 40px;
 }
 .arrow_next{
   position: absolute;
@@ -294,56 +292,56 @@ body{
 /* Services Section */
 
 .gartenplanung-main{
-  background-image: url('images/gartenplanung.jpeg');
+  background-image: url('images/gartenplanung.png');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .gartenneubau-main{
-  background-image: url('images/gartennebau.jpeg');
+  background-image: url('images/gartenneubau.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .gartenumanderung-main{
-  background-image: url('images/gartenmanderung.jpeg');
+  background-image: url('images/gartenumanderung.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .gartenunterhalt-main{
-  background-image: url('images/gartenunterhalt.jpeg');
+  background-image: url('images/gartenunterhalt.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .gartenausgestaltung-main{
-  background-image: url('images/gartenausgestaltung.jpeg');
+  background-image: url('images/gartenausgestaltung.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .spielplatzbau-main{
-  background-image: url('images/spielpatzbau.jpeg');
+  background-image: url('images/spielplatzbau.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .teich-main{
-  background-image: url('images/teich.jpeg');
+  background-image: url('images/teich.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
   padding-left: 10%;
 }
 .terrassenbau-main{
-  background-image: url('images/terrassenbau.jpeg');
+  background-image: url('images/terrassenbau.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -369,11 +367,15 @@ ul.service-list{
   height: 80px;
   z-index: 20;
 }
+.gallery-link{
+  padding: 7% 0 0;
+  text-align: right;
+}
 
 /* Leitbild Section */
 
 .leitbild-main{
-  background-image: url('images/leitbild.jpeg');
+  background-image: url('images/leitbild.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -384,14 +386,11 @@ ul.service-list{
   width: 600px;
   height: 500px;
 }
-.leitbild{
-  transform: translate(0%, 27%);
-}
 
 /* Team Section */
 
 .team{
-  background-image: url('images/team-background.jpeg');
+  background-image: url('images/team.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -425,13 +424,22 @@ ul.service-list{
 }
 .slider-team{
   height: 100vh;
-  padding: 11% 0%;
+}
+
+/*  News Section  */
+
+.news-main{
+  background-image: url('images/news.png');
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Jobs Section */
 
 .jobs{
-  background-image: url('images/jobs.jpeg');
+  background-image: url('images/jobs.jpg');
   background-size: cover;
   background-position: center;
   height:100vh;
@@ -439,19 +447,17 @@ ul.service-list{
 .main-jobs{
   transform: translate(0%, 27%);
 }
-.contact-img{
-  width: 110px;
-  height: 80px;
-  z-index: 20;
-  margin-right: 10px;
-  margin-top: 145px;
-  float: right;
+.jobs-para{
+  margin-bottom: 0!important;
+}
+.job-para{
+  padding: 15px 7%;
 }
 
 /* Form Section */
 
 .myForm{
-  background-image: url('images/kontakt.jpeg');
+  background-image: url('images/kontakt.jpg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -521,7 +527,7 @@ textarea.form-control{
 
 .main-address{
   height: 100vh;
-  background-image: url('images/gartenplanung.jpeg');
+  background-image: url('images/gartenplanung.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -547,6 +553,11 @@ textarea.form-control{
 }
 .mail{
   color: #212529;
+  outline: none;
+}
+.mail:hover{
+  color: #FF5722;
+  text-decoration: underline;
 }
 .facebook{
   margin-right: 35px;
@@ -559,7 +570,7 @@ textarea.form-control{
 /* Impressum Section */
 
 .main-impressum{
-  background-image: url('images/impressum.jpeg');
+  background-image: url('images/impressum.jpg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -593,6 +604,74 @@ textarea.form-control{
   font-size: 20px;
 }
 
+/* Bildergalerie Section */
+
+.nav-gallery{
+  font-weight: normal!important;
+  font-family: config-light!important;
+  font-size: 1.5em!important;
+}
+.gallery-main{
+  background-color: #EDE8DA;
+}
+.grid-item {
+	width: 300px;
+	padding: 15px;
+}
+.gallery a img{
+	height:250px;
+	transition:1s;
+  border-radius: 15px;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+}
+.gallery img:hover{
+	filter:grayscale(100%);
+	transform:scale(1.1);
+}
+.gallery{
+	box-sizing:border-box;
+  margin: 0 auto;
+  padding-top: 7%;
+}
+.bildergalerie-main{
+  height: 100vh;
+  width: 100vw;
+  background-color: #EDE8DA;
+}
+#lg-download{
+  display: none;
+}
+#lg-share{
+  display: none;
+}
+.main-spielplatzbau, .operative, .neues{
+  height: 100vh;
+}
+.gallery-slider, .news-slider{
+  height: 100vh!important;
+}
+.slider-img{
+  width: 500px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
+}
+.text-slider{
+  margin-top: 4%;
+}
+.slider-text{
+  color: #FF5722;
+  text-align: center;
+  outline: none;
+}
+.slider-text:hover{
+  color: #FF5722;
+}
+.slick-slide{
+  height: -webkit-fill-available;
+}
+
+
 /*------------------------ Small Laptop and Tablets Breakpoint -----------------------------*/
 
 @media only screen and (max-width : 1024px){
@@ -611,30 +690,15 @@ textarea.form-control{
     font-size: 15px;
   }
   .mobile-para{
-    font-size: 15px;
-  }
-  .slider{
-    padding: 20% 5%;
+    font-size: 18px;
   }
   .flip-card-4{
     height: 435px;
     width: 525px;
   }
-  .slider-team{
-    height: 100vh;
-    padding: 15% 0%;
-  }
   .contact-image{
     width: 90px;
     height: 70px;
-  }
-  .contact-img {
-    width: 90px;
-    height: 70px;
-    z-index: 20;
-    margin-right: 70px;
-    margin-top: 135px;
-    float: right;
   }
   .myForm{
     padding-top: 10%;
@@ -649,6 +713,12 @@ textarea.form-control{
   }
   .description{
     font-size: 1.2rem
+  }
+  .gallery{
+    padding-top: 10%;
+  }
+  .main-spielplatzbau{
+    height: fit-content;
   }
 }
 
@@ -690,16 +760,67 @@ textarea.form-control{
 .dropdown-item{
   font-size: 18px;
 }
-.flip-card,.flipCard{
+.first{
+  background-image: url('images/home-mobile.png');
+}
+.second{
+  background-image: url('images/home-mobile2.png');
+}
+.third{
+  background-image: url('images/home-mobile3.png');
+}
+.flip-card, .flipCard{
   width: 275px;
   height: 380px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 30%);
+  transform: translate(-50%, 25%);
   padding: 0;
 }
 .gartenplanung-main, .gartenneubau-main, .terrassenbau-main, .teich-main, .spielplatzbau-main, .gartenunterhalt-main, .gartenumanderung-main, .gartenausgestaltung-main{
   padding-left: 0;
+}
+.gartenplanung-main{
+  background-image: url('images/gartenplanung-mobile.jpg');
+}
+.gartenneubau-main{
+  background-image: url('images/gartenneubau-mobile.jpg');
+}
+.gartenausgestaltung-main{
+  background-image: url('images/gartenausgestaltung-mobile.jpg');
+}
+.gartenumanderung-main{
+  background-image: url('images/gartenumanderung-mobile.jpg');
+}
+.gartenunterhalt-main{
+  background-image: url('images/gartenunterhalt-mobile.jpg');
+}
+.teich-main{
+  background-image: url('images/teich-mobile.jpg');
+}
+.terrassenbau-main{
+  background-image: url('images/terrassenbau-mobile.jpg');
+}
+.spielplatzbau-main{
+  background-image: url('images/spielplatzbau-mobile.jpg');
+}
+.leitbild-main{
+  background-image: url('images/leitbild-mobile.jpg');
+}
+.team{
+  background-image: url('images/team-mobile.jpg');
+}
+.jobs{
+  background-image: url('images/jobs-mobile.jpg');
+}
+.myForm{
+  background-image: url('images/kontakt-mobile.jpg');
+}
+.main-address{
+  background-image: url('images/gartenplanung-mobile.png');
+}
+.impressum-main{
+  background-image: url('images/impressum-mobile.jpg');
 }
 .align-self-center{
   align-self: auto!important;
@@ -711,19 +832,16 @@ textarea.form-control{
   align-items: flex-end;
   bottom: 100px;
 }
-.gallery-next, .gallery-prev{
-  align-items: flex-end;
-  bottom: -50px!important;
-}
 .carousel-control-next-icon, .carousel-control-prev-icon{
   width: 15px;
   height: 40px;
+  bottom: -25px!important;
 }
 .arrow_next, .arrow_prev{
   width: 15px;
   height: 40px;
   align-items: flex-end;
-  bottom: 100px;
+  bottom: 70px;
 }
 .menu-icon-2{
   width: 230px;
@@ -741,32 +859,13 @@ textarea.form-control{
   margin-bottom: 0.5rem;
 }
 .mobile-para{
-  font-size: 13px;
+  font-size: 16px;
   font-family: 'Open Sans'
-}
-.flip-card-3{
-  width: 250px;
-  height: 250px;
-}
-.img-event{
-  width: 100%;
-  height: 60%;
-}
-.close{
-  top: 32px;
-  right: 0;
-  width: 30px;
-}
-.slider{
-  padding: 35% 5%;
-}
-.event, .events-images{
-  background-image: url('images/home-mobile.jpg');
 }
 .contact-button{
   position: relative;
   transform: translate(-36%,0);
-  padding-bottom: 20%;
+  padding-bottom: 12%;
 }
 .contact-image{
   width: 70px;
@@ -777,12 +876,6 @@ textarea.form-control{
   right: 40%;
   margin-top: 38%;
 }
-.contact-img{
-  width: 70px;
-  height: 60px;
-  margin-right: 0;
-  margin-top: 0;
-}
 .rounded-img{
   width: 150px;
   height: 150px;
@@ -791,11 +884,7 @@ textarea.form-control{
   width: 275px;
   height: 380px;
 }
-.slider-team{
-  height: 100vh;
-  padding: 30% 0%;
-}
- .myForm{
+.myForm{
   padding-top: 21%;
 }
 .form-heading{
@@ -833,8 +922,9 @@ textarea.form-control{
   width: 50px;
 }
 .impressum{
+  transform: translate(-50%, 30%);
   width: 290px;
-  height: 450px;
+  height: 400px;
 }
 .heading-impressum{
   font-size: 1.5rem;
@@ -848,5 +938,29 @@ textarea.form-control{
 #sent{
   padding: 25% 21px;
   font-size: 24px;
+}
+.gallery{
+  padding-top: 20%;
+}
+.nav-gallery{
+  font-size: 20px!important;
+}
+.slider-img{
+  width: 250px;
+  height: 300px;
+}
+.text-slider{
+  font-size: 1.5rem;
+  margin-top: 8%;
+}
+.main-spielplatzbau, .neues{
+  height: fit-content;
+}
+.job-para{
+  font-size: 12px!important;
+  padding: 0px 7%;
+}
+.jobs-heading{
+  font-size: 17px!important;
 }
 }

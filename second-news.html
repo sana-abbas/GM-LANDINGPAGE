@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>News</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="slick/slick/slick.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="gallery/css/lightbox.min.css">
+    <script type="text/javascript" src="gallery/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="gallery/js/masonry.pkgd.min.js"></script>
+    <link href="gallery/dist/css/lightgallery.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="gallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="gallery/lib/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      $(document).ready(function(){
+
+        $('.dropdown-item, #home, #impressum').click(function(){
+           $('.navbar-collapse').collapse('hide');
+            $('.menu-icon').toggle();
+            $('.heading').toggle();
+            $(".navbar-toggler").find('span:first').toggleClass("icon-close navbar-toggler-icon");
+         });
+
+        $("button[data-toggle=collapse]").on('click', function(){
+          $(this).find('span:first').toggleClass("icon-close navbar-toggler-icon");
+          $('.menu-icon').toggle();
+          $('.heading').toggle();
+        });
+        $('.gallery').masonry({
+          itemSelector: '.grid-item',
+          isFitWidth: true,
+        });
+
+        $(".gallery").lightGallery();
+      });
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+    <div class="container-fluid header-section" id="header-section">
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="navbar-brand">
+          <a href="#"><img src="images/nav-icon.png" alt="logo" class="nav-icon"></a>
+          <img src="images/menu-icon.png" alt="logo" class="menu-icon">
+        </div>
+        <span class="heading align-items-center">Neues Design</span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-list">
+            <li class="nav-item">
+              <a class="nav-link" id="home" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="home" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bildergalerie.html">Bildergalerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="gartenneubau.html">Gartenneubau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="gartenumanderung.html">Gartenumänderung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="gartenunterhalt.html">Gartenunterhalt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="teich.html">Teich- & Poolbau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="gartenausgestaltung.html">Gartenausgestaltung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-gallery" href="spielplatzbau.html">Spielplatzbau</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <main>
+
+      <section class="gallery-main neues d-flex align-items-center justify-content-center">
+
+        <div class="gallery">
+          <a href="gallery/neues/neues1.jpg" class="grid-item"><img src="gallery/neues/neues1.jpg" alt=""></a>
+          <a href="gallery/neues/neues2.jpg" class="grid-item"><img src="gallery/neues/neues2.jpg" alt=""></a>
+          <a href="gallery/neues/neues3.jpg" class="grid-item"><img src="gallery/neues/neues3.jpg" alt=""></a>
+        </div>
+
+      </section>
+
+    </main>
+
+  </body>
+</html>

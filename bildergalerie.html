@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Bildergalerie</title>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+  $(document).ready(function(){
+
+    $('.dropdown-item, #home, #impressum').click(function(){
+       $('.navbar-collapse').collapse('hide');
+        $('.menu-icon').toggle();
+        $('.heading').toggle();
+        $(".navbar-toggler").find('span:first').toggleClass("icon-close navbar-toggler-icon");
+     });
+
+    $("button[data-toggle=collapse]").on('click', function(){
+      $(this).find('span:first').toggleClass("icon-close navbar-toggler-icon");
+      $('.menu-icon').toggle();
+      $('.heading').toggle();
+    });
+
+    $('.gallery-slider').slick({
+      dots:false,
+      arrows:true,
+      nextArrow:'<img src="images/right.png" class="arrow_next">',
+      prevArrow:'<img src="images/left.png" class="arrow_prev">',
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 900,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+  });
+
+  });
+</script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid header-section" id="header-section">
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="navbar-brand">
+          <a href="#"><img src="images/nav-icon.png" alt="logo" class="nav-icon"></a>
+        <img src="images/menu-icon.png" alt="logo" class="menu-icon">
+      </div>
+      <span class="heading align-items-center">Bildergalerie</span>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-list">
+          <li class="nav-item">
+            <a class="nav-link" id="home" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="home" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bildergalerie.html">Bildergalerie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="gartenneubau.html">Gartenneubau</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="gartenumanderung.html">Gartenumänderung</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="gartenunterhalt.html">Gartenunterhalt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="teich.html">Teich- & Poolbau</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="gartenausgestaltung.html">Gartenausgestaltung</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-gallery" href="spielplatzbau.html">Spielplatzbau</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <main>
+
+    <div class="bildergalerie-main">
+      <div class="gallery-slider d-flex align-items-center justify-content-center">
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="gartenneubau.html"><img src="gallery/gartenneubau/gartenneubau5.jpg" alt="" class="slider-img"></a>
+            <a href="gartenneubau.html" class="slider-text"> <h2 class="text-slider">Gartenneubau</h2> </a>
+          </div>
+        </div>
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="gartenumanderung.html"><img src="gallery/gartenumanderung/gartenumänderung9.jpg" alt="" class="slider-img"></a>
+            <a href="gartenumanderung.html" class="slider-text"> <h2 class="text-slider">Gartenumänderung</h2> </a>
+          </div>
+        </div>
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="gartenunterhalt.html"> <img src="gallery/gartenunterhalt/gartenunterhalt1.jpg" alt="" class="slider-img"></a>
+            <a href="gartenunterhalt.html" class="slider-text"> <h2 class="text-slider">Gartenunterhalt</h2> </a>
+          </div>
+        </div>
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="teich.html"><img src="gallery/teich/teich1.jpg" alt="" class="slider-img"></a>
+            <a href="teich.html" class="slider-text"> <h2 class="text-slider">Teich- & Poolbau</h2> </a>
+          </div>
+        </div>
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="gartenausgestaltung.html"><img src="gallery/gartenausgestaltung/gartenausgestaltung1.jpg" alt="" class="slider-img"></a>
+            <a href="gartenausgestaltung.html" class="slider-text"> <h2 class="text-slider">Gartenausgestaltung</h2> </a>
+          </div>
+        </div>
+        <div class="gallery-slide d-flex align-items-center justify-content-center">
+          <div>
+            <a href="spielplatzbau.html"><img src="gallery/spielplatzbau/spielplatzbau8.jpg" alt="" class="slider-img"></a>
+            <a href="spielplatzbau.html" class="slider-text"> <h2 class="text-slider">Spielplatzbau</h2> </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  </body>
+</html>
