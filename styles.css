@@ -272,49 +272,6 @@ body{
 .main-para{
   padding: 0 2%;
 }
-
-/* Event Section */
-
-.event{
-  background-image: url('images/home.png');
-  width: 100%;
-  background-size: cover;
-}
-.slider{
-  height: 100vh;
-  padding: 15% 5%;
-}
-.flip-card-3 {
- perspective: 1000px;
- outline: none;
- width: 325px;
- height: 325px;
-}
-.events-images{
-  background-image: url('images/home.png');
-  height: 100vh;
-  background-size: cover;
-}
- .events-inner{
-  margin: 0 auto;
-}
-.events{
-  padding: 5%;
-}
-.img-event{
-  border: 20px solid rgba(237, 232, 218, 0.6);
-  margin: 0 auto;
-  width: 65%;
-  height: 70%;
-  border-radius: 15px;
-  box-shadow: -15px -15px 20px rgba(0, 0, 0, 0.3), inset -5px -5px 20px rgba(0, 0, 0, 0.47);
-}
-.close{
-  position: relative;
-  opacity: 1;
-  right: 19%;
-  width: 40px;
-}
 .arrow_next{
   position: absolute;
   bottom: 40%;
@@ -429,9 +386,6 @@ ul.service-list{
   width: 600px;
   height: 500px;
 }
-.leitbild{
-  transform: translate(0%, 27%);
-}
 
 /* Team Section */
 
@@ -471,6 +425,9 @@ ul.service-list{
 .slider-team{
   height: 100vh;
 }
+
+/*  News Section  */
+
 .news-main{
   background-image: url('images/news.png');
   background-position: center;
@@ -495,14 +452,6 @@ ul.service-list{
 }
 .job-para{
   padding: 15px 7%;
-}
-.contact-img{
-  width: 110px;
-  height: 80px;
-  z-index: 20;
-  margin-right: 10px;
-  margin-top: 145px;
-  float: right;
 }
 
 /* Form Section */
@@ -654,6 +603,9 @@ textarea.form-control{
   font-family: 'config-light';
   font-size: 20px;
 }
+
+/* Bildergalerie Section */
+
 .nav-gallery{
   font-weight: normal!important;
   font-family: config-light!important;
@@ -692,7 +644,7 @@ textarea.form-control{
 #lg-share{
   display: none;
 }
-.spielplatzbau-main, .operative, .neues{
+.main-spielplatzbau, .operative, .neues{
   height: 100vh;
 }
 .gallery-slider, .news-slider{
@@ -740,28 +692,13 @@ textarea.form-control{
   .mobile-para{
     font-size: 18px;
   }
-  .slider{
-    padding: 20% 5%;
-  }
   .flip-card-4{
     height: 435px;
     width: 525px;
   }
-  .slider-team{
-    height: 100vh;
-    padding: 15% 0%;
-  }
   .contact-image{
     width: 90px;
     height: 70px;
-  }
-  .contact-img {
-    width: 90px;
-    height: 70px;
-    z-index: 20;
-    margin-right: 70px;
-    margin-top: 135px;
-    float: right;
   }
   .myForm{
     padding-top: 10%;
@@ -780,7 +717,7 @@ textarea.form-control{
   .gallery{
     padding-top: 10%;
   }
-  .spielplatzbau-main{
+  .main-spielplatzbau{
     height: fit-content;
   }
 }
@@ -895,10 +832,6 @@ textarea.form-control{
   align-items: flex-end;
   bottom: 100px;
 }
-.gallery-next, .gallery-prev{
-  align-items: flex-end;
-  bottom: -50px!important;
-}
 .carousel-control-next-icon, .carousel-control-prev-icon{
   width: 15px;
   height: 40px;
@@ -929,25 +862,6 @@ textarea.form-control{
   font-size: 16px;
   font-family: 'Open Sans'
 }
-.flip-card-3{
-  width: 250px;
-  height: 250px;
-}
-.img-event{
-  width: 100%;
-  height: 60%;
-}
-.close{
-  top: 32px;
-  right: 0;
-  width: 30px;
-}
-.slider{
-  padding: 35% 5%;
-}
-.event, .events-images{
-  background-image: url('images/home-mobile.jpg');
-}
 .contact-button{
   position: relative;
   transform: translate(-36%,0);
@@ -962,12 +876,6 @@ textarea.form-control{
   right: 40%;
   margin-top: 38%;
 }
-.contact-img{
-  width: 70px;
-  height: 60px;
-  margin-right: 0;
-  margin-top: 0;
-}
 .rounded-img{
   width: 150px;
   height: 150px;
@@ -976,11 +884,7 @@ textarea.form-control{
   width: 275px;
   height: 380px;
 }
-.slider-team{
-  height: 100vh;
-  padding: 30% 0%;
-}
- .myForm{
+.myForm{
   padding-top: 21%;
 }
 .form-heading{
@@ -1018,6 +922,7 @@ textarea.form-control{
   width: 50px;
 }
 .impressum{
+  transform: translate(-50%, 30%);
   width: 290px;
   height: 400px;
 }
@@ -1048,7 +953,7 @@ textarea.form-control{
   font-size: 1.5rem;
   margin-top: 8%;
 }
-.spielplatzbau-main, .neues{
+.main-spielplatzbau, .neues{
   height: fit-content;
 }
 .job-para{
