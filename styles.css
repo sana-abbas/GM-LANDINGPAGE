@@ -259,6 +259,7 @@ body{
 .card-title{
   font-family: 'config';
   color: #ff6633;
+  font-size: 1.75rem;
 }
 .card-para{
   font-size: 18px;
@@ -504,7 +505,7 @@ textarea.form-control{
   text-align: center;
   background-color: rgba(255, 69, 0, 0.51);
   margin: 0 auto;
-  padding: 1% 10%;
+  padding: 1%;
   font-size: 20px;
 }
 .submit-btn:hover{
@@ -669,6 +670,12 @@ textarea.form-control{
 }
 .slick-slide{
   height: -webkit-fill-available;
+}
+.news-date{
+  font-size: 16px;
+  font-family: 'config-light';
+  color: #000;
+  font-weight: lighter;
 }
 
 
@@ -849,6 +856,9 @@ textarea.form-control{
 }
 .card-title{
   font-size: 1.5rem;
+}
+.news-date{
+  font-size: 12px;
 }
 .card-para,.team-text{
   font-size: 14px;
